@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/index.css"/>
+
+    <title>Sobre mí</title>
+</head>
+<body>
+    <nav class="mb-5">
+        <mi-navegacion></mi-navegacion>
+    </nav> 
+    <main>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagen fuera de la tarjeta y alineada al centro -->
+                <div class="col-auto d-flex align-items-center ">
+                    <div class="img-contenedor imagen-circular d-flex justify-content-center img-rodolfo">
+                        <img src="/assets/images/rodolfo1.jpg" class=" img-fluid" alt="">
+                    </div>
+                </div>
+        
+                <!-- Tarjeta con texto -->
+                <div class="col">
+                    <div class="card p-4 border-0 color-fondo">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Perfil Profesional</h5>
+                            <p class="card-text text-justify">
+                                Soy <b>Desarrollador Full Stack Junior</b> con formación en <b>Ingeniería en Administración</b>, lo que me 
+                                permite aportar tanto habilidades técnicas como una visión estratégica para la gestión de proyectos 
+                                tecnológicos. Me especializo en el desarrollo de aplicaciones web utilizando tecnologías modernas y 
+                                metodologías ágiles.
+                                <br><br>
+                                Cuento con una certificación como <b>Scrum Máster</b>, lo que respalda mi capacidad para trabajar de 
+                                manera efectiva en equipos colaborativos y dinámicos. Me mantengo en constante aprendizaje y 
+                                actualización para adaptarme a las nuevas tendencias del desarrollo de software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex flex-row flex-wrap gap-3 justify-content-center">
+           <div>
+                <mi-popover   
+                  ancho="60vw"
+                  text-boton="Más sobre mí" 
+                  titulo="De la Pandemia al Código: Mi Viaje" 
+                  contenido="En la pandemia, tuve que tomar decisiones importantes y una de ellas fue reinventarme,
+                  En ese periodo, descubrí que la programación era una gran oportunidad para conseguir empleo. 
+                  Todo comenzó en noviembre de 2020, cuando inicié mi primer <b>Bootcamp en Desarrollo de aplicaciones 
+                  móviles android trainne.</b> Luego, en enero de 2022, comencé mi segundo <b>Bootcamp en Desarrollo 
+                  de aplicaciones full stack java trainne.</b> Finalmente, en marzo 2023, complete mi último 
+                  <b>Bootcamp en Desarrollo de aplicaciones full stack JavaScript trainne.</b> Actualmente, continúo 
+                  ampliando mis conocimientos en programación de forma autodidacta, con el objetivo de convertirme en un 
+                  <b>Senior Full Stack.</b>" 
+                  > 
+                </mi-popover>
+            </div>
+            <div>
+                <mi-popover
+                ancho="25vw"
+                text-boton="Mi Lema"
+                titulo="Mi Lema"
+                contenido="Programar a muerte cada dia para ser mejor que ayer"
+                ></mi-popover>
+            </div>
+            <div>
+                <mi-popover
+                ancho="25"
+                text-boton="Mi Objetivo"
+                titulo="Mi Meta"
+                contenido="Ser el mejor programador full stack del mundo"
+                ></mi-popover>
+            </div>
+         
+         <div>
+            <mi-popover
+            ancho="25"
+            text-boton="Que Busco"
+            titulo="Mi trabajo ideal"
+            contenido="Quiero un trabajo 100% remoto, jornada completa, trabajo en equipo, proyectos desafiantes y oportunidades de aprendizaje continuo."
+            ></mi-popover>
+        </div>
+        <div>
+            <mi-popover
+            ancho="25"
+            text-boton="Curiosidades"
+            titulo="Cuido de mí"
+            contenido="Me gusta hacer ejercicio fisico al menos 3 veces por semana, leo un libro al mes. A veces toco guitarra y aprendo una melodia nueva"
+            ></mi-popover>
+        </div>
+        <div>
+            <mi-popover
+            ancho="25"
+            text-boton="Resolutivo"
+            titulo="Como resuelvo problemas"
+            contenido="Divide y vencerás, descompongo el problema en partes más pequeñas y manejables."
+            ></mi-popover>
+        </div>
+        <div>
+            <mi-popover
+            ancho="25"
+            text-boton="Me defino"
+            titulo="Me identifico como"
+            contenido="Analitico, estructurado, colaborativo, empático, adaptativo"
+            ></mi-popover>
+        </div>
+        <div>
+            <mi-popover
+            ancho="25"
+            text-boton="Estoy preparado"
+            titulo="Me identifico como"
+            contenido="Para programar en cualquier lenguaje o framework, ya que tengo una base sólida en programación y lógica. Dispuesto aprender lo que se requiera."
+            ></mi-popover>
+        </div>
+     </div>
+    
+    
+
+  <div class="container mt-4">
+    <div class="row ">
+      <!-- Acordeón al lado izquierdo -->
+      <div class="col-12 col-md-3 fondo-colapse color-fondo">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item color-fondo">
+            <h5 class="d-flex justify-content-center fs-6 align-items-center fw-bold">
+            </h5>
+            <h2 class="accordion-header">
+              <!-- Botón sin texto visible -->
+              <button class="accordion-button accordion-collapse collapse show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <span class="fw-bold">Lenguajes y Framework</span>
+                <img src="/assets/iconos/punta-flecha.png" id="flecha"  class="punta-flecha" alt="">     
+              </button>
+            </h2>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <!-- Botón sin texto visible -->
+              <button class="accordion-button collapsed color-fondo fw-bold text-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <span class="fw-bold">Herramientas</span>
+                <span class="d-none">Accordion Item #2</span> <!-- Texto oculto en el botón -->
+                <img src="/assets/iconos/punta-flecha.png" id="flecha"  class="punta-flecha" alt="" style="transition: transform 0.3s;">
+              </button>
+            </h2>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <!-- Botón sin texto visible -->
+              <button class="accordion-button collapsed color-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <span class="fw-bold">Habilidades Blandas</span>
+                <span class="d-none">Accordion Item #3</span> <!-- Texto oculto en el botón -->
+                <img src="/assets/iconos/punta-flecha.png" id="flecha" class="punta-flecha" alt="">
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+ 
+  
+      <!-- Texto al lado derecho de los botones, visible solo cuando se expande -->
+      <div class="col-12 col-md-8">
+        <div class="accordion-content">
+          <div class="accordion-text" id="accordionTextOne" data-bs-parent="#mainAccordion" >
+            <h4 class="fw-bold fs-4 izquierda">Lenguajes y Frameworks</h4>
+            <div class="texto">
+                <div class="mt-5 d-flex align-items-start gap-3">
+                    <img src="/assets/iconos/html-5.png" style="width: 48px;" alt="Html" data-bs-toggle="tooltip" title="HTML">
+                    <img src="/assets/iconos/css-3.png" style="width: 48px;" alt="CSS" data-bs-toggle="tooltip" title="CSS">
+                </div>
+                <div class="mt-3 d-flex align-items-start gap-3">
+                  <img src="/assets/iconos/bootstrap.png" style="width: 48px;" alt="Bootstrap" data-bs-toggle="tooltip" title="Bootstrap">
+                
+              </div>
+                <div class="mt-3 d-flex align-items-start gap-3">
+                    <img src="/assets/iconos/javascripts.png" style="width: 48px;" alt="Javascript" data-bs-toggle="tooltip" title="Javascript">
+                    <img src="/assets/iconos/node.png" alt="Node.js" data-bs-toggle="tooltip" title="Node.js">
+                    <img src="/assets/iconos/react.png" alt="React.js" data-bs-toggle="tooltip" title="React.js">
+                    <img src="/assets/iconos/angular.png" alt="Angular.js" data-bs-toggle="tooltip" title="Angular.js">
+                    <img src="/assets/iconos/vue.png" style="width: 48px;" alt="Vue.js" data-bs-toggle="tooltip" title="Vue.js">
+                    <img src="/assets/iconos/typescript.png" style="width: 48px;" alt="Vue.js" data-bs-toggle="tooltip" title="Vue.js">
+                </div>
+              <div class="mt-3 d-flex align-items-start gap-3">
+                  <img src="/assets/iconos/java.png" style="width: 48px;" alt="Java" data-bs-toggle="tooltip" title="Java">
+                  <img src="/assets/iconos/springboot.png" alt="Springboot" data-bs-toggle="tooltip" title="SprintBoot">
+              </div>
+              <div class="mt-3 d-flex align-items-start gap-3">
+                <img src="/assets/iconos/git.png" style="width: 48px;" alt="Git" data-bs-toggle="tooltip" title="Git">
+                <img src="/assets/iconos/gitlab.png" alt="GitLab" data-bs-toggle="tooltip" title="GitLab">
+                <img src="/assets/iconos/github.png" style="width: 45px;" alt="GitHub" data-bs-toggle="tooltip" title="GitHub">
+            </div>
+          </div>
+          </div>
+        
+          <div class="accordion-text" id="accordionTextTwo" data-bs-parent="#mainAccordion">
+           <h4 class="fw-bold izquierda">Herramientas</h4>
+           <div class="mt-5 d-flex align-items-start gap-3">
+            <img src="/assets/herramientas/jira.png" style="width: 48px;" alt="Jira" data-bs-toggle="tooltip" title="Jira">
+            <img src="/assets/herramientas/trello.png" style="width: 48px;" alt="Trello" data-bs-toggle="tooltip" title="Trello">
+            <img src="/assets/herramientas/miro.png" alt="Miro" data-bs-toggle="tooltip" title="Miro">
+            <img src="/assets/herramientas/slack.png" alt="Slack" data-bs-toggle="tooltip" title="Slack">
+            <img src="/assets/herramientas/figma.png" style="width: 48px;" alt="Figma" data-bs-toggle="tooltip" title="Figma">
+            <img src="/assets/herramientas/excel.png" style="width: 48px;" alt="Excell" data-bs-toggle="tooltip" title="Excell">
+            <img src="/assets/herramientas/git-kraken.png" style="width: 48px;" alt="Gitkraken" data-bs-toggle="tooltip" title="GitKraken">
+            <img src="/assets/herramientas/sourcetree.png" style="width: 48px;" alt="SourceTree" data-bs-toggle="tooltip" title="SourceTree">
+            <img src="/assets/herramientas/bizagi.png" style="width: 48px;" alt="Bizagi" data-bs-toggle="tooltip" title="Bizagi">
+        </div>
+        
+       
+
+
+          
+        </div>
+        <div class="accordion-text" id="accordionTextThree" data-bs-parent="#mainAccordion">
+          <h4 class="fw-bold fs-4 izquierda">Habilidades Blandas</h4>
+          <div class="texto">
+          <ul class="list-group mt-3">
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Liderazgo</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Inteligencia emocional</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Comunicación efectiva</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Adaptabilidad</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Vision Estratégica</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Resolución de problemas</li>
+           <li type="button" class="list-group-item list-group-item-action color-fondo fw-bold">Negociación</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>  
+</div> 
+        
+    </main>
+<footer>
+    <mi-footer></mi-footer>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/popover.js"></script>
+    <script src="/js/skill.js"></script>
+</body>
+</html>

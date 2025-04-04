@@ -1,0 +1,235 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  
+}
+body {
+  background-color: #95AEE9 !important;;
+}
+
+.color-fondo{
+  background-color: #95AEE9 !important;;
+}
+.accordion-content {
+  padding-bottom: 200px; /* o lo que sea necesario */
+}
+
+
+.imagen-contenedor {
+    width: 300px;        /* Ajusta el ancho que quieras */
+    height: 200px;       /* Ajusta la altura que quieras */
+    overflow: hidden;    /* Oculta lo que sobresale */
+  }
+
+.img-contenedor img{
+    width: 20%;
+  height: auto;
+  object-fit: cover;   /* Hace que se recorte la imagen para llenar el contenedor */
+  border: -40px solid #fff;
+
+}
+
+.imagen-circular {
+    width: 200px;             /* Tamaño del círculo */
+    height: 200px;
+    border-radius: 50%;       /* Hace el círculo */
+    overflow: hidden;         /* Oculta lo que sobresale */
+    border: 4px solid #fff;   /* Borde opcional */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra opcional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    margin-top: 100px;
+  }
+
+  .imagen-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Recorta para llenar sin deformar */
+  }
+
+  .img-rodolfo {
+   margin-top: 0px;
+  }
+
+
+
+  /* Personaliza el contenedor del popover */
+  .popover {
+    color: #394476 !important; /* Asegura que el color del texto se aplique */
+    border-color: #394476 !important; /* Asegura que el borde tenga el color deseado */
+  }
+
+
+#btn-popover {
+  background-color: #394476 !important; /* Color de fondo del botón */
+  color: white !important; /* Color del texto */
+  border-color: #394476 !important; /* Color del borde */
+}
+
+/* Estilo para el hover del botón */
+#btn-popover:hover {
+  background-color: #95AEE9 !important; /* Fondo del hover */
+  color: white !important; /* Color del texto en hover */
+  border-color: #F0F6FD !important; /* Borde del hover */
+  text-decoration: none !important; /* Quitar subrayado en hover */
+}
+
+/* Estilos personalizados para el contenido del popover */
+.popover.custom-popover {
+  max-width: none !important; /* Permite expansión */
+  width: auto !important;
+  white-space: normal !important;
+  /* background-color: #394476; Color de fondo del popover */
+  color: rgb(11, 7, 7) !important; /* Color del texto */
+  border-color: #394476 !important; /* Color del borde del popover */
+}
+
+/* Estilo para el cuerpo del popover */
+.popover.custom-popover .popover-body {
+  word-wrap: break-word ;
+  text-align: justify ;
+}
+
+/* Acordeon */
+
+.texto{
+  text-align: justify;
+}
+
+.fondo-colapse{
+  background-color: #F7F7F7;
+}
+
+.color-colapse{
+color:#F7F7F7;
+}
+
+.punta-flecha{
+  width: 20px;
+}
+
+
+/* Estilos personalizados para evitar que el contenido desaparezca del DOM */
+.accordion-body .accordion .collapse {
+  display: block !important; /* Mantiene el contenido en el DOM */
+  height: 0; /* Altura inicial para ocultar el contenido */
+  overflow: hidden; /* Oculta el contenido que excede la altura */
+  transition: height 0.3s ease; /* Transición suave */
+}
+.accordion-body .accordion .collapse.show {
+  height: auto; /* Muestra el contenido cuando está abierto */
+}
+
+.accordion-body {
+  max-height: 300px; /* Ajusta según necesidad */
+  overflow-y: auto; /* Agrega scroll si el contenido es muy grande */
+}
+
+
+/* Ocultar la flecha predeterminada de Bootstrap */
+.accordion-button::after {
+  display: none !important;
+}
+/* Personalización del botón */
+.custom-button {
+  display: flex;
+  justify-items: end;
+  
+  gap: 10px; /* Espacio entre la imagen y el texto */
+  position: relative
+}
+
+
+/* Ocultar la flecha predeterminada de Bootstrap */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Estilo del botón del acordeón */
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding-right: 50px;
+}
+
+
+.icon-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden; /* Evita que el icono sobresalga */
+}
+
+/* Asegurar que las imágenes sean visibles */
+.icon-container img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain; /* Asegura que la imagen se ajuste */
+  filter: invert(1); /* Convierte colores negros en blancos */
+}
+
+/* Ocultar el icono "cerrado" cuando el acordeón está colapsado */
+.icon-close {
+  display: none;
+}
+
+/* Mostrar la imagen correcta al abrir/cerrar el acordeón */
+.accordion-button:not(.collapsed) .icon-open {
+  display: none;
+}
+.accordion-button:not(.collapsed) .icon-close {
+  display: inline;
+}
+/* Elimina el color celeste de fondo al hacer clic */
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Evita que el acordeón cambie de color al expandirse */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Personaliza el color del borde si es necesario */
+.accordion-item {
+  border: 1px solid #ddd; /* Puedes cambiarlo por otro color */
+}
+
+
+.izquierda {
+  display: inline-block;
+  position: relative;
+
+}
+
+.izquierda::after {
+  content: "";
+  display: block;
+  width: 50%; /* Ancho igual al texto */
+  height: 4px; /* Grosor de la línea */
+  background-color:#394476; /* Color rojo */
+  position: absolute;
+  bottom: -5px; /* Espaciado debajo del texto */
+  left: 0;
+  transform: translateX(5%); /* Ajustar la alineación */
+
+}
+
+
