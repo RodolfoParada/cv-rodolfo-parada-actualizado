@@ -5,226 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/formacion.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
 
     <title>Formación</title>
 </head>
 <body>
     <nav>
         <mi-navegacion></mi-navegacion>
+      
     </nav>
 
 <main>
 
-        <!-- <div class="container formacion">
-        <acordeon-formacion
-        titulo1="Ingeniero en Administración."
-          contenido1= " <img src='assets/formacion/UniversidadMayor.png' style='width: 60px; display:flex;justify-content-center;'   class='img-fluid rounded-top' alt='' /> <br>
-                     <b>[2013 – 2017] Ingeniería en Administración, mención marketing y gestión comercial.</b><br>
-                     Universidad Mayor<br>
-                     Titulado.
-                    " 
-
-          titulo2="Bootcamp Full-Stack Javascript - Talento Digital"
-
-          contenido2="<img src='assets/formacion/TalentoDigital.png' style='width: 60px; ' class='img-fluid rounded-top' alt='https://talentodigitalparachile.cl/' />
-                      <img src='assets/formacion/edutecno.png' style='width: 50px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /> <br>
-                    <b> <br>[Feb 2023 - Ago 2023] Bootcamp en desarrollo de aplicaciones Full-Stack Javascript Trainne. | Talento Digital</b><br>
-                    Curso: Completado.<br>
-                    Diploma Participación en Bootcamp Full-Stack Javascript.<br>
-                    <img src='assets/formacion/diplomaEdutecto.png' style='width: 250px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /> <br>
-
-          "
-          titulo3="Bootcamp Full-Stack Java Trainne - Talento Digital"
-          contenido3="<img src='assets/formacion/TalentoDigital.png' style='width: 60px; ' class='img-fluid rounded-top' alt='https://talentodigitalparachile.cl/' />
-          <img src='assets/formacion/aiep.png' style='width: 50px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /> <br>
-          <b>[Ene 2022 - Jun 2022] Bootcamp en desarrollo de aplicaciones Full-Stack Java Trainne - Talento Digital.</b><br>
-          Curso: Completado.<br>
-          Diploma Participación en Bootcamp Full-Stack Javascript por AIEP.<br>
-          <img src='assets/formacion/diplomaAIEP.png' style='width: 250px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /> <br>
-          Insignia Digital - Talento de Digital:<br>
-          <img src='assets/formacion/InsigniaJava.png' style='width: 250px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /><br>
-          Se puede verificar en:<br>
-
-          <a href='https://www.credly.com/earner/earned/badge/d2717f5a-f03e-482f-8108-4eb17e53410f' style='text-decoration: none;' target='_blank'>Verificar Aquí</a>
-
-          "
-
-
-        ></acordeon-formacion>
-
-        </div> -->
-
-
-
-        <div class="container formacion">
-            <div class="row ">
-              <!-- Acordeón al lado izquierdo -->
-              <div class="col-12 col-md-3 fondo-colapse color-fondo">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item color-fondo">
-                    <h5 class="d-flex justify-content-center fs-6 align-items-center fw-bold">
-                    </h5>
-                    <h2 class="accordion-header">
-                      <!-- Botón sin texto visible -->
-                      <button class="accordion-button accordion-collapse collapse show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <span class="fw-bold">Ingeniero en Administración.</span>
-                        <img src="/assets/iconos/punta-flecha.png" id="flecha"  class="punta-flecha" alt="">
-                      </button>
-                    </h2>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!-- Botón sin texto visible -->
-                      <button class="accordion-button collapsed color-fondo fw-bold text-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <span class="fw-bold">Bootcamp Full-Stack Javascript - Talento Digital</span>
-                        <span class="d-none">Accordion Item #2</span> <!-- Texto oculto en el botón -->
-                        <img src="assets/iconos/punta-flecha.png" id="flecha"  class="punta-flecha" alt="" style="transition: transform 0.3s;">
-                      </button>
-                    </h2>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!-- Botón sin texto visible -->
-                      <button class="accordion-button collapsed color-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <span class="fw-bold">Bootcamp Full-Stack Java Trainne - Talento Digital</span>
-                        <span class="d-none">Accordion Item #3</span> <!-- Texto oculto en el botón -->
-                        <img src="assets/iconos/punta-flecha.png" id="flecha" class="punta-flecha" alt="">
-                      </button>
-                    </h2>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!-- Botón sin texto visible -->
-                      <button class="accordion-button collapsed color-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <span class="fw-bold">Bootcamp Móviles Android Trainne - Talento Digital</span>
-                        <span class="d-none">Accordion Item #4</span> <!-- Texto oculto en el botón -->
-                        <img src="assets/iconos/punta-flecha.png" id="flecha" class="punta-flecha" alt="">
-                      </button>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Texto al lado derecho de los botones, visible solo cuando se expande -->
-              <div class="col-12 col-md-8">
-                <div class="accordion-content">
-                  <div class="accordion-text" id="accordionTextOne" data-bs-parent="#mainAccordion" >
-                    <h4 class="fw-bold fs-4 izquierda">Ingeniero en Administración</h4>
-                    <div class="texto">
-                        <div class="mt-4 d-flex flex-column align-items-start gap-2">
-                            <img src="assets/formacion/UniversidadMayor.png" style="width: 60px;" class="img-fluid rounded-top" alt="" />
-                            <b>[2013 – 2017] Ingeniería en Administración, mención marketing y gestión comercial.</b>
-                         <div class="">
-                            <span>Universidad Mayor</spa><br>
-                            <span>Titulado.</span>
-                         </div>
-                        </div>
-                    </div>
-                  </div>
-                  </div>
-
-                  <div class="accordion-text" id="accordionTextTwo" data-bs-parent="#mainAccordion">
-                   <h4 class="fw-bold izquierda">Bootcamp Full-Stack Javascript - Talento Digital</h4>
-                   <div class="texto">
-                    <!-- Contenedor principal -->
-                    <div class="mt-4 d-flex flex-column align-items-start gap-3">
-                        <!-- Título y texto en negrita -->
-                        <b>[Feb 2023 - Ago 2023] Bootcamp en desarrollo de aplicaciones Full-Stack Javascript Trainne. | Talento Digital</b>
-                
-                        <!-- Descripción y logos -->
-                        <div class="d-flex align-items-center gap-3">
-                            <div>
-                                <img src='assets/formacion/TalentoDigital.png' style='width: 60px;' class='img-fluid rounded-top' alt='https://talentodigitalparachile.cl/' />
-                                <img src='assets/formacion/edutecno.png' style='width: 50px;' class='img-fluid rounded-top' alt='https://edutecno.cl/' />
-                            </div>
-                            <div>
-                                Curso: Completado.<br>
-                                Diploma Participación en Bootcamp Full-Stack Javascript.
-                            </div>
-                        </div>
-                        <div>
-                            <img src='assets/formacion/diplomaEdutecto.png' style='width: 250px;' class='img-fluid rounded-top' alt='https://edutecno.cl/' />
-                        </div>
-                    </div>
-                </div>
-                
-
-
-
-
-
-                </div>
-                <div class="accordion-text" id="accordionTextThree" data-bs-parent="#mainAccordion">
-                  <h4 class="fw-bold fs-4 izquierda">Bootcamp Full-Stack Java Trainne - Talento Digital</h4>
-                  <div class="texto">
-
-
-                               <!-- Título y texto en negrita -->
-                               <b>[Ene 2022 - Jun 2022] Bootcamp en desarrollo de aplicaciones Full-Stack Java Trainne - Talento Digital.</b><br>
-                
-                               <!-- Descripción y logos -->
-                               <div class="d-flex align-items-center gap-3">
-                                   <div>
-                                       <img src='assets/formacion/TalentoDigital.png' style='width: 60px;' class='img-fluid rounded-top' alt='https://talentodigitalparachile.cl/' />
-                                       <img src='assets/formacion/aiep.png' style='width: 60px;'  class='img-fluid rounded-top' alt='https://aiep.cl/' /> <br>
-                                   </div>
-                                   <div>
-                                    Curso: Completado.<br>
-                                    Diploma Participación en Bootcamp Full-Stack Javascript por AIEP.<br>
-                                   </div>
-                               </div>
-                               <div>
-                                Insignia Digital - Talento de Digital:<br>
-                                <img src='assets/formacion/InsigniaJava.png' style='width: 250px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /><br>
-                                Se puede verificar en:<br>
-                      
-                                <a href='https://www.credly.com/earner/earned/badge/d2717f5a-f03e-482f-8108-4eb17e53410f' style='text-decoration: none;' target='_blank'>Verificar Aquí</a>
-                      
-                           </div>
-                       </div>
-                       
-                  </div>
-                  <div class="accordion-text" id="accordionTextFour" data-bs-parent="#mainAccordion">
-                    <h4 class="fw-bold fs-4 izquierda">Bootcamp Full-Stack Java Trainne - Talento Digital</h4>
-                      <div class="container">
-                       <!-- Título y texto en negrita -->
-                       <b>[Ene 2022 - Jun 2022] Bootcamp en desarrollo de aplicaciones Full-Stack Java Trainne - Talento Digital.</b><br>
-                   
-                       <!-- Descripción y logos -->
-                       <div class="d-flex align-items-center gap-3">
-                           <div>
-                               <img src='assets/formacion/TalentoDigital.png' style='width: 60px;' class='img-fluid rounded-top' alt='https://talentodigitalparachile.cl/' />
-                               <img src='assets/formacion/aiep.png' style='width: 60px;'  class='img-fluid rounded-top' alt='https://aiep.cl/' /> <br>
-                           </div>
-                           <div>
-                            Curso: Completado.<br>
-                            Diploma Participación en Bootcamp Full-Stack Javascript por AIEP.<br>
-                           </div>
-                       </div>
-                       <div>
-                        Insignia Digital - Talento de Digital:<br>
-                        <img src='assets/formacion/InsigniaJava.png' style='width: 250px;'  class='img-fluid rounded-top' alt='https://edutecno.cl/' /><br>
-                        Se puede verificar en:<br>
-              
-                        <a href='https://www.credly.com/earner/earned/badge/d2717f5a-f03e-482f-8108-4eb17e53410f' style='text-decoration: none;' target='_blank'>Verificar Aquí</a>
-              
-                   </div>
-                      </div>
-                  </div>
+         <div class="container formacion">
+          <mi-acordeon data='[
+          { 
+            "titulo": "Ingeniero en Administración, mención marketing y gestión comercial.", 
+            "contenido": "<img src=\"assets/formacion/UniversidadMayor.png\" class=\"img-fluid rounded-top\" style=\"width: 10%; display: flex; justify-content: center;\" alt=\"Universidad Mayor\"><br> <b>[2013 – 2017] Ingeniería en Administración, mención marketing y gestión comercial.</b><br> Universidad Mayor.<br> Titulado."
+          },
+          { 
+            "titulo": "Bootcamp Full-Stack Javascript - Talento Digital.", 
+            "contenido": "<div style=\"display: flex; justify-content: start; align-items: start; gap: 10px;\"><img src=\"assets/formacion/TalentoDigital.png\" class=\"img-fluid rounded-top\" style=\"width: 10%;\" alt=\"Talento Digital\"><img src=\"assets/formacion/edutecno.png\" class=\"img-fluid rounded-top\" style=\"width: 8%;\" alt=\"https://aiep.cl/\"></div><br><b>[Feb 2023 - Ago 2023] Bootcamp en desarrollo de aplicaciones Full-Stack Javascript Trainne. | Talento Digital.</b><br>Curso: Completado.<br>Diploma Participación en Bootcamp en desarrollo aplicaciones Full-Stack Javascript.<br><img src=\"assets/formacion/diplomaEdutecno.png\" class=\"img-fluid rounded-top\" style=\"width: 50%; display: flex; justify-content: center;\" alt=\"https://edutecno.cl/\">"
+          },
+          {
+            "titulo": "Bootcamp Full-Stack Java Trainne - Talento Digital.", 
+            "contenido": "<div style=\"display: flex; justify-content: start; gap: 10px;\"><img src=\"assets/formacion/TalentoDigital.png\" class=\"img-fluid rounded-top\" style=\"width: 10%;\" alt=\"https://talentodigitalparachile.cl/\"><img src=\"assets/formacion/aiep.png\" class=\"img-fluid rounded-top\" style=\"width: 10%;\" alt=\"https://talentodigitalparachile.cl/\"></div><br><b>[Ene 2022 - Jun 2022] Bootcamp en desarrollo de aplicaciones Full-Stack Java Trainne - Talento Digital.</b><br>Curso: Completado.<br>Diploma Participación en Bootcamp en desarrollo aplicaciones Full-Stack Javascript por AIEP.<br><img src=\"assets/formacion/diplomaAIEP.png\" class=\"img-fluid rounded-top\" style=\"width: 50%; display: flex; justify-content: center;\" alt=\"https://talentodigitalparachile.cl/\"><br>Insignia Digital - Talento de Digital | SOFOFA.<br><img src=\"assets/formacion/InsigniaJava.png\" class=\"img-fluid rounded-top\" style=\"width: 20%; display: flex; justify-content: center;\" alt=\"https://talentodigitalparachile.cl/\"><br>"
+          },
+          {
+            "titulo": "Bootcamp Full-Stack Java Trainne - Talento Digital.", 
+            "contenido": "<div style=\"display: flex; justify-content: start; gap: 10px;\"><img src=\"assets/formacion/TalentoDigital.png\" class=\"img-fluid rounded-top\" style=\"width: 10%;\" alt=\"https://talentodigitalparachile.cl/\"><img src=\"assets/formacion/Duoc.png\" class=\"img-fluid rounded-top\" style=\"width: 10%;\" alt=\"https://duoc.cl/\"></div><br><b>[Nov 2020 - May 2021] Bootcamp en desarrollo de aplicaciones Móviles android Trainne - Talento Digital.</b><br>Curso: Completado.<br>Diploma Participación en Bootcamp desarrollo aplicaciones android trainne por Duoc.<br><img src=\"assets/formacion/diplomaDuoc.png\" class=\"img-fluid rounded-top\" style=\"width: 40%; display: flex; justify-content: center;\" alt=\"https://talentodigitalparachile.cl/\"><br>Insignia Digital - Talento de Digital | SOFOFA.<br><img src=\"assets/formacion/InsigniaAndroid.png\" class=\"img-fluid rounded-top\" style=\"width: 20%; display: flex; justify-content: center;\" alt=\"https://talentodigitalparachile.cl/\"><br>"
+          },
+          {
+            "titulo": "Diplomado Marketing Digital y Gestión Estratégica.", 
+            "contenido": "<img src=\"assets/formacion/aiep.png\" class=\"img-fluid rounded-top\" style=\"width: 10%; display: flex; justify-content: center;\" alt=\"AIEP\"><br> <b>[Ago 2022 – Nov 2022] Diplomado Marketing Digital y Gestión Estratégica.</b><br>AIEP<br>Titulado del Diplomado."
+          },
+          {
+            "titulo": "Diplomado en Dirección Comercial y Ventas.", 
+            "contenido": "<img src=\"assets/formacion/UniversidadSanSebastian.png\" class=\"img-fluid rounded-top\" style=\"width: 25%; display: flex; justify-content: center;\" alt=\"San Sebastián.\"><br> <b>[May 2020 – Nov 2020] Diplomado de Dirección Comercial y Ventas.</b><br>Universidad San Sebastián.<br>Titulado del Diplomado."
+          },
+          {
+            "titulo": "Técnico de nivel superior en administración en Recursos Humanos.", 
+            "contenido": "<img src=\"assets/formacion/EscuelaComercio.png\" class=\"img-fluid rounded-top\" style=\"width: 25%; display: flex; justify-content: center;\" alt=\"Escuela de Comercio de Santiago.\"><br> <b>[Feb 2010 – Jun 2012] Técnico de nivel superior en administración en Recursos Humanos.</b><br>Escuela de Comercio de Santiago.<br>Titulado."
+          },
+          {
+            "titulo": "Diplomado en diseño de experiencia de usuario UX/UI.",
+            "contenido": "<img src=\"assets/formacion/Duoc.png\" class=\"img-fluid rounded-top\" style=\"width: 25%; display: flex; justify-content: center;\" alt=\"Duoc.\"><br> <b>[Ago 2024] Diplomado UX para el Desarrollo de Productos Digitales.</b><br>Duoc.<br>En curso."
+          },
+          {
+            "titulo": "Técnico de Nivel Superior Analista Programador Computacional.",
+            "contenido": "<img src=\"assets/formacion/EscuelaComercio.png\" class=\"img-fluid rounded-top\" style=\"width: 25%; display: flex; justify-content: center;\" alt=\"IPCHILE.\"><br> <b>[Mar - 2024] Técnico de Nivel Superior Analista Programador Computacional.</b><br>IPCHILE.<br>En Curso."
+          }
         
-            
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
+          
+          ]'>
 
 
-          </div>
-        </div>
-
+          </mi-acordeon>
+         </div>
+        
 </main>
 
 
@@ -237,8 +74,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/nav.js" defer></script>
         <script src="js/footer.js" defer></script>
-        <script src="js/acordeon-formacion.js" defer></script>
-        <script src="js/skill.js" defer></script>
+        <script src="js/acordeon.js" defer></script>
+     
 
 </body>
 </html>
