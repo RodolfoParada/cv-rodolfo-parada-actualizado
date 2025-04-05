@@ -7,3 +7,15 @@ html, body {
 body {
   background-color: #95AEE9 !important;;
 }
+.formacion {
+  margin-top: 100px; 
+}
+
+.accordion-button.collapsed {
+  background-color: transparent; /* Asegúrate de que los botones no tengan fondo que empuje el contenido */
+  border: none;
+}
+
+.accordion-content {
+  margin-bottom: -200px; /* Ajusta el espacio superior en el contenido expandido */
+}

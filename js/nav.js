@@ -30,11 +30,7 @@ class navegacion extends HTMLElement {
           <a class="nav-link proyectos" href="proyectos.html">Proyectos</a>
         </li>
         </li>
-           <li class="nav-item">
-          <a class="nav-link contactame" href="contactame.html">Contactamé</a>
-        </li>
       </ul>
-
       <!-- Imagen a la derecha -->
           <img src="assets/images/rodolfo1.jpg" alt="Perfil" class="rounded-circle img-perfil" style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
         </div>

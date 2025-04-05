@@ -4,14 +4,17 @@ class Acordeon extends HTMLElement {
   }
 
   connectedCallback() {
-    const titulo1 = this.getAttribute('titulo1') || 'Lenguajes y Framework';
-    const contenido1 = this.getAttribute('contenido1') || 'Contenido para Lenguajes y Framework';
+    const titulo1 = this.getAttribute('titulo1') || 'Tema 1';
+    const contenido1 = this.getAttribute('contenido1') || 'Contenido 1';
 
-    const titulo2 = this.getAttribute('titulo2') || 'Herramientas';
-    const contenido2 = this.getAttribute('contenido2') || 'Contenido para Herramientas';
+    const titulo2 = this.getAttribute('titulo2') || 'Tema 2';
+    const contenido2 = this.getAttribute('contenido2') || 'Contenido 2';
 
-    const titulo3 = this.getAttribute('titulo3') || 'Habilidades Blandas';
-    const contenido3 = this.getAttribute('contenido3') || 'Contenido para Habilidades Blandas';
+    const titulo3 = this.getAttribute('titulo3') || 'Tema 3';
+    const contenido3 = this.getAttribute('contenido3') || 'Contenido 3';
+
+    
+   
 
     this.innerHTML = `
       <link rel="stylesheet" href="css/index.css"/>
@@ -71,4 +74,4 @@ class Acordeon extends HTMLElement {
   }
 }
 
-window.customElements.define("mi-acordeon", Acordeon);
+window.customElements.define("acordeon-experiencia", Acordeon);
