@@ -27,7 +27,7 @@ class navegacion extends HTMLElement {
         </li>
         </li>
            <li class="nav-item">
-          <a class="nav-link proyectos" href="proyectos.html">Proyectos</a>
+          <a class="nav-link proyectos" href="/proyectos.html">Proyectos</a>
         </li>
         </li>
            <li class="nav-item">
