@@ -6,7 +6,7 @@ class navegacion extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
-          <link rel="stylesheet" href="/css/nav.css"/>
+          <link rel="stylesheet" href="css/nav.css"/>
        <nav class="navbar navbar-expand-lg navbar-light fixed-top color">
   <div class="container-fluid">
     <a class="titulo-rodolfo fw-bold fs-5" href="#">Rodolfo Parada González</a>
