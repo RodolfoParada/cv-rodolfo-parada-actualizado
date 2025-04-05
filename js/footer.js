@@ -15,27 +15,27 @@ class footer extends HTMLElement {
         <!-- Lista izquierda -->
         <div class="col-3 text-center ">
         <div>
-            <a><img src="/assets/iconos/react.png" class="img-item" style="width:30px; height:30px ;" alt="React" data-bs-toggle="tooltip" title="React.js">
+            <a><img src="assets/iconos/react.png" class="img-item" style="width:30px; height:30px ;" alt="React" data-bs-toggle="tooltip" title="React.js">
             </a>
             <a>
-              <img src="/assets/iconos/angular.png" class="img-item" style="width:30px; height:30px ;" alt="Angular" data-bs-toggle="tooltip" title="Angular.js">.
+              <img src="assets/iconos/angular.png" class="img-item" style="width:30px; height:30px ;" alt="Angular" data-bs-toggle="tooltip" title="Angular.js">.
             </a>
             <a>
-             <img src="/assets/iconos/vue.png" class="img-item"  style="width:30px; height:30px ;" alt="Vue.js" data-bs-toggle="tooltip" title="Vue.js">
+             <img src="assets/iconos/vue.png" class="img-item"  style="width:30px; height:30px ;" alt="Vue.js" data-bs-toggle="tooltip" title="Vue.js">
             </a>    
             </a>
-              <img src="/assets/iconos/javascripts.png" class="img-item" style="width:30px; height:30px ;" alt="Javascript" data-bs-toggle="tooltip" title="Javascript">
+              <img src="assets/iconos/javascripts.png" class="img-item" style="width:30px; height:30px ;" alt="Javascript" data-bs-toggle="tooltip" title="Javascript">
             </a>
         </div>
         <div>
             <a>
-            <img src="/assets/iconos/node.png" class="img-item" style="width:30px; height:30px ;" alt="Node.js" data-bs-toggle="tooltip" title="Node.js">
+            <img src="assets/iconos/node.png" class="img-item" style="width:30px; height:30px ;" alt="Node.js" data-bs-toggle="tooltip" title="Node.js">
             </a>
             <a>
-              <img src="/assets/iconos/typescript.png" class="img-item" style="width:30px; height:30px ;" alt="Typescript" data-bs-toggle="tooltip" title="Typescript">
+              <img src="assets/iconos/typescript.png" class="img-item" style="width:30px; height:30px ;" alt="Typescript" data-bs-toggle="tooltip" title="Typescript">
             </a>
             <a>
-              <img src="/assets/iconos/github.png" class="img-item"  style="width:30px; height:30px ;" alt="GitHub" data-bs-toggle="tooltip" title="GitHub">
+              <img src="assets/iconos/github.png" class="img-item"  style="width:30px; height:30px ;" alt="GitHub" data-bs-toggle="tooltip" title="GitHub">
             </a>
           </div> 
         </div>
@@ -63,24 +63,24 @@ class footer extends HTMLElement {
               <img src="assets/iconos/springboot.png" class="img-item" style="width:30px; height:30px;" alt="SpringBoot" data-bs-toggle="tooltip" title="SpringBoot">
             </a>
              <a>
-              <img src="/assets/iconos/java.png" class="img-item" style="width:30px; height:30px;" alt="Java" data-bs-toggle="tooltip" title="Java">
+              <img src="assets/iconos/java.png" class="img-item" style="width:30px; height:30px;" alt="Java" data-bs-toggle="tooltip" title="Java">
             </a>
              <a>
-              <img src="/assets/iconos/html-5.png" class="img-item" style="width:30px; height:30px ;" alt="HTML5" data-bs-toggle="tooltip" title="HTML5">
+              <img src="assets/iconos/html-5.png" class="img-item" style="width:30px; height:30px ;" alt="HTML5" data-bs-toggle="tooltip" title="HTML5">
             </a>
             <a>
-              <img src="/assets/iconos/css-3.png" class="img-item" style="width:30px; height:30px ;" alt="CSS3" data-bs-toggle="tooltip" title="CSS3">
+              <img src="assets/iconos/css-3.png" class="img-item" style="width:30px; height:30px ;" alt="CSS3" data-bs-toggle="tooltip" title="CSS3">
             </a>
         </div>
         <div>
             <a>
-            <img src="/assets/iconos/bootstrap.png" class="img-item" style="width:30px; height:30px ;" alt="Bootstrap" data-bs-toggle="tooltip" title="Bootstrap">
+            <img src="assets/iconos/bootstrap.png" class="img-item" style="width:30px; height:30px ;" alt="Bootstrap" data-bs-toggle="tooltip" title="Bootstrap">
             </a>
             <a>
-              <img src="/assets/iconos/git.png" class="img-item" style="width:30px; height:30px ;" alt="Git" data-bs-toggle="tooltip" title="Git">
+              <img src="assets/iconos/git.png" class="img-item" style="width:30px; height:30px ;" alt="Git" data-bs-toggle="tooltip" title="Git">
             </a>
             <a>
-              <img src="/assets/iconos/gitlab.png" class="img-item"  style="width:30px; height:30px ;" alt="GitLab" data-bs-toggle="tooltip" title="GitLab">
+              <img src="assets/iconos/gitlab.png" class="img-item"  style="width:30px; height:30px ;" alt="GitLab" data-bs-toggle="tooltip" title="GitLab">
             </a>
           </div> 
       </div>

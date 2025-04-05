@@ -51,9 +51,24 @@ class popover extends HTMLElement {
                     placement: "bottom",
                     fallbackPlacements: [],
                     customClass: "custom-popover",
+                    trigger: 'focus'  // Cambié el trigger a 'focus' para controlar manualmente el cierre
                 });
-            })
-            .catch((err) => console.error("Error cargando Bootstrap:", err));
+        // Agregar un botón de cierre personalizado al contenido del popover
+        const popoverContent = btn.getAttribute("data-bs-content");
+        const closeButton = `
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        `;
+
+        // Actualizar el contenido del popover para incluir el botón de cierre
+        btn.setAttribute("data-bs-content", closeButton + popoverContent);
+
+        // Escuchar el clic en el botón de cierre para cerrar el popover
+        const closeBtn = btn.querySelector(".btn-close");
+        closeBtn.addEventListener("click", () => {
+            popover.hide(); // Cerrar el popover cuando se presiona el botón
+        });
+          })
+          .catch((err) => console.error("Error cargando Bootstrap:", err));
     }
 }
 }
