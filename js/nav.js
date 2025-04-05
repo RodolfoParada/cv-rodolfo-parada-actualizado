@@ -2,7 +2,7 @@ class navegacion extends HTMLElement {
   constructor() {
     super();
   }
-//a
+
   connectedCallback() {
     this.innerHTML = `
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
@@ -30,12 +30,12 @@ class navegacion extends HTMLElement {
         </li>
         </li>
            <li class="nav-item">
-          <a class="nav-link contactame" href="contactame.html">Contáctame</a>
+          <a class="nav-link contactame" href="contactame.html">Contactamé</a>
         </li>
       </ul>
 
       <!-- Imagen a la derecha -->
-          <img src="/assets/images/rodolfo1.jpg" alt="Perfil" class="rounded-circle img-perfil" style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
+          <img src="assets/images/rodolfo1.jpg" alt="Perfil" class="rounded-circle img-perfil" style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
         </div>
     </div>
   </div>
