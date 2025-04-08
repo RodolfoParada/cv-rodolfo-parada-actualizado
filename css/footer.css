@@ -77,3 +77,18 @@
   footer .container {
     position: relative; /* No se verá afectado por el texto sobresaliente */
   }
+
+  /*efectos del centro de linkedin y github*/
+  .centro-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+.centro-image {
+  transform: scale(1.2); /* Aumenta el tamaño */
+  border-radius: 50%;    /* Convierte la imagen en un círculo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Opcional: sombra */
+  cursor: pointer;
+}
