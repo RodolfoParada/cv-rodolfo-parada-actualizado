@@ -31,5 +31,49 @@
 
 
   /* titulo de contactame footer */
- 
+  .titulo-contacto {
+    position: absolute; /* El texto se puede mover libremente sin afectar el flujo */
+    top: -40px; /* Ajusta cuánto sobresale */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Centrado exacto */
+    font-size: 2rem; /* Tamaño más grande */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: transparent; /* Fondo transparente para efecto */
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Efecto de resplandor */
+    z-index: 10; /* Para que se quede por encima de otros elementos */
+    animation: neonGlow 1.5s ease-in-out infinite alternate, floatUp 3s ease-out forwards;
+  }
   
+  /* Animación para el texto que hace que sobresalga y brille */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #394476, 0 0 15px #394476, 0 0 20px #95AEE9, 0 0 30px #95AEE9, 0 0 40px #95AEE9;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0 15px #394476, 0 0 20px #394476, 0 0 30px #95AEE9, 0 0 40px #95AEE9, 0 0 50px #95AEE9;
+    }
+  }
+  
+  /* Animación para el movimiento del texto */
+  @keyframes floatUp {
+    0% {
+      top: 20px;
+      opacity: 0;
+    }
+    100% {
+      top: -60px;
+      opacity: 1;
+    }
+  }
+  
+  footer {
+    position: relative; /* Mantén el flujo del footer */
+  }
+  
+  footer .container {
+    position: relative; /* No se verá afectado por el texto sobresaliente */
+  }

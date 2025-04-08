@@ -10,6 +10,7 @@ class footer extends HTMLElement {
               <link rel="stylesheet" href="css/footer.css"/>
    <footer class="footer text-white py-4 fixed-bottom">
     <div class="container">
+      <h5 class="titulo-contacto cuadro-contacto">Contáctame</h5>
       <div class="row justify-content-between align-items-center">
         
         <!-- Lista izquierda -->
@@ -18,7 +19,7 @@ class footer extends HTMLElement {
             <a><img src="assets/iconos/react.png" class="img-item" style="width:30px; height:30px ;" alt="React" data-bs-toggle="tooltip" title="React.js">
             </a>
             <a>
-              <img src="assets/iconos/angular.png" class="img-item" style="width:30px; height:30px ;" alt="Angular" data-bs-toggle="tooltip" title="Angular.js">.
+              <img src="assets/iconos/angular.png" class="img-item" style="width:30px; height:30px ;" alt="Angular" data-bs-toggle="tooltip" title="Angular.js">
             </a>
             <a>
              <img src="assets/iconos/vue.png" class="img-item"  style="width:30px; height:30px ;" alt="Vue.js" data-bs-toggle="tooltip" title="Vue.js">
@@ -44,7 +45,7 @@ class footer extends HTMLElement {
         <!-- Sección de contacto (Centro) -->
         <div class="col-6 text-center titulo-color ">
          <div class="container">
-          <h5 class="titulo-contacto cuadro-contacto">Contáctame</h5>
+        
         </div>
           <p>
             <a href="https://www.linkedin.com/in/rodolfoparada/" target="_blank" rel="link">
