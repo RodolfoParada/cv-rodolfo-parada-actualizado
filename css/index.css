@@ -255,3 +255,11 @@ th, td{
   border: 1px solid #ddd;
   text-align: left;
 }
+
+/* Hover en cada celda */
+table.table td:hover,
+table.table th:hover {
+  background-color: #394476; /* color de fondo al pasar el mouse */
+  color: #fff; /* color del texto al pasar el mouse */
+  cursor: pointer;
+}
