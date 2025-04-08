@@ -49,10 +49,10 @@ class footer extends HTMLElement {
         </div>
           <p>
             <a href="https://www.linkedin.com/in/rodolfoparada/" target="_blank" rel="link">
-              <img src="assets/footer/linkedin.jpg" alt="Imagen de contacto" class="img-linkedin" data-bs-toggle="tooltip" title="LinkedIn">
+              <img src="assets/footer/linkedin.jpg" alt="Imagen de contacto" class="img-linkedin" data-bs-toggle="tooltip" title="Contactame por LinkedIn">
             </a>
             <a href="https://github.com/RodolfoParada" target="_blank" rel="github">
-              <img src="assets/footer/github.png" alt="Imagen de contacto" class="img-github" data-bs-toggle="tooltip" title="GitHub">
+              <img src="assets/footer/github.png" alt="Imagen de contacto" class="img-github" data-bs-toggle="tooltip" title="Puedes ver mi GitHub">
             </a>
           </p>
         </div>

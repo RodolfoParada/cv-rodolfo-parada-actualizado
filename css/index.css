@@ -207,6 +207,11 @@ color:#F7F7F7;
   box-shadow: none !important;
 }
 
+.accordion-header:hover {
+  background-color: #394476;
+  color: white; 
+}
+
 /* Personaliza el color del borde si es necesario */
 .accordion-item {
   border: 1px solid #ddd; /* Puedes cambiarlo por otro color */
