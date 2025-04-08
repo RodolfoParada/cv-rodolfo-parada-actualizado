@@ -233,3 +233,25 @@ color:#F7F7F7;
 }
 
 
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table.table th, table.table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color:#95AEE9;
+}
+
+table.table .hidden-header th {
+  display: none;
+}
+
+th, td{
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
