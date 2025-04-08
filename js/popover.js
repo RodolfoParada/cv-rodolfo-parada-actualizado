@@ -1,9 +1,8 @@
 class popover extends HTMLElement {
-    constructor() {
-      super();
-    }
- 
-     
+  constructor() {
+    super();
+  }
+
   connectedCallback() {
     // Obtenemos los atributos del componente
     const titulo = this.getAttribute('titulo');
@@ -15,63 +14,76 @@ class popover extends HTMLElement {
     const popoverClass = `custom-popover-${ancho.replace('%', '').replace('vw', '').replace('px', '')}`;
 
     this.innerHTML = ` 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/index.css"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="/css/index.css"/>
       <style>
-          .custom-popover {
-                    min-width: ${ancho} !important; /* Usa el valor definido en el atributo */
-                    max-width: 100vw; /* Garantiza que no sobrepase el tamaño de la ventana */
-                    width: ${ancho} !important; /* Controla el ancho */
-                }
+        .custom-popover {
+          min-width: ${ancho} !important;
+          max-width: 100vw;
+          width: ${ancho} !important;
+        }
+        .popover-header {
+          position: relative;
+        }
+        .popover-header .btn-close {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
       </style>
-    <button 
-          type="button" 
-          class="btn btn-lg popover" 
-          id="btn-popover"
-          data-bs-toggle="popover"
-          data-bs-placement="bottom" 
-          data-bs-html="true"
-          data-bs-title="${titulo}" 
-          data-bs-content="${contenido}"
-          min-width="${ancho}"
-          >
-          ${textoBoton}
-    </button>
+      <button 
+        type="button" 
+        class="btn btn-lg popover" 
+        id="btn-popover"
+        data-bs-toggle="popover"
+        data-bs-placement="bottom" 
+        data-bs-html="true"
+        data-bs-title="${titulo}" 
+        data-bs-content="${contenido}"
+        min-width="${ancho}"
+      >
+        ${textoBoton}
+      </button>
     `;
+    
     this.initPopover(popoverClass);
   }
 
   initPopover() {
     const btn = this.querySelector("#btn-popover");
     if (btn) {
-        // Aseguramos que Bootstrap está disponible antes de usarlo
-        import("https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js")
-            .then(() => {
-                new bootstrap.Popover(btn, {
-                    placement: "bottom",
-                    fallbackPlacements: [],
-                    customClass: "custom-popover",
-                    trigger: 'focus'  // Cambié el trigger a 'focus' para controlar manualmente el cierre
+      import("https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js")
+        .then(() => {
+          const popover = new bootstrap.Popover(btn, {
+            placement: "bottom",
+            fallbackPlacements: [],
+            customClass: "custom-popover",
+            trigger: 'focus',
+            html: true
+          });
+
+          // Evento cuando el popover se ha mostrado
+          btn.addEventListener('shown.bs.popover', () => {
+            const popoverId = btn.getAttribute('aria-describedby');
+            const popoverEl = document.getElementById(popoverId);
+            if (popoverEl) {
+              const popoverHeader = popoverEl.querySelector('.popover-header');
+              if (popoverHeader) {
+                // Crear y añadir botón de cierre al título
+                const closeButton = document.createElement('button');
+                closeButton.className = 'btn-close';
+                closeButton.setAttribute('aria-label', 'Close');
+                closeButton.addEventListener('click', () => {
+                  popover.hide();
                 });
-        // Agregar un botón de cierre personalizado al contenido del popover
-        const popoverContent = btn.getAttribute("data-bs-content");
-        const closeButton = `
-        <button type="button" class="btn-close" aria-label="Close"></button>
-        `;
-
-        // Actualizar el contenido del popover para incluir el botón de cierre
-        btn.setAttribute("data-bs-content", closeButton + popoverContent);
-
-        // Escuchar el clic en el botón de cierre para cerrar el popover
-        const closeBtn = btn.querySelector(".btn-close");
-        closeBtn.addEventListener("click", () => {
-            popover.hide(); // Cerrar el popover cuando se presiona el botón
-        });
-          })
-          .catch((err) => console.error("Error cargando Bootstrap:", err));
+                popoverHeader.appendChild(closeButton);
+              }
+            }
+          });
+        })
+        .catch((err) => console.error("Error cargando Bootstrap:", err));
     }
-}
+  }
 }
 
-
-window.customElements.define("mi-popover",popover);
+window.customElements.define("mi-popover", popover);
