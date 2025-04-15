@@ -7,11 +7,13 @@ class Navegacion extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/nav.css" />
+      <link rel="stylesheet" href="css/nav.css"/>
+       <link rel="stylesheet" href="css/dark-mode.css"/>
     
         <nav class="navbar navbar-expand-lg navbar-light fixed-top color px-3">
         <div class="container-fluid">
           <a class="titulo-rodolfo fw-bold fs-5 text-white" href="#">Rodolfo Parada González</a>
+          
           <button class="navbar-toggler" id="btn-toggle" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,6 +24,8 @@ class Navegacion extends HTMLElement {
               <li class="nav-item"><a class="nav-link text-white" href="formacion.html">Formación</a></li>
               <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
             </ul>
+            <!-- Aquí insertas tu componente modo oscuro -->
+            <mi-modo-oscuro style="width: 40px; height: 40px; object-fit: cover; margin-left: 700px;"></mi-modo-oscuro>
             <img src="assets/images/rodolfo1.jpg" alt="Perfil" class="rounded-circle img-perfil"
               style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
           </div>

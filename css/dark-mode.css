@@ -1,0 +1,137 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+.dark-mode {
+    background-color: black !important;
+    color: white !important;
+    }
+
+.dark-mode .card{
+    background-color: black !important; 
+    color: white !important;  
+    }
+.dark-mode #btn-popover{
+    background-color: black !important; 
+    color: white !important;  
+    }
+
+.dark-mode #btn-popover:hover {
+    background-color: #333 !important; /* Fondo del hover */
+    color:white !important; /* Color del texto en hover */
+    border-color: #F0F6FD !important; /* Borde del hover */
+    text-decoration: none !important; /* Quitar subrayado en hover */
+    }     
+.dark-mode  .accordion-header:hover {
+    background-color: #333 !important; /* Fondo del hover */
+    color:white !important; /* Color del texto en hover */
+    border-color: #F0F6FD !important; /* Borde del hover */
+    text-decoration: none !important; /* Quitar subrayado en hover */
+    }
+.dark-mode .accordion{
+    background-color: black !important; 
+    color: white !important;  
+    }
+.dark-mode .color-fondo{
+    background-color: black !important;
+    color:white !important;
+    }
+.dark-mode .izquierda::after {
+    content: "";
+    display: block;
+    width: 50%; /* Ancho igual al texto */
+    height: 4px; /* Grosor de la línea */
+    background-color: #333; /* Color rojo */
+    position: absolute;
+    bottom: -5px; /* Espaciado debajo del texto */
+    left: 0;
+    transform: translateX(5%); /* Ajustar la alineación */
+    }
+.dark-mode table.table td, table.table th {
+    padding: 12px ;  
+    border: 1px solid white;
+    text-align: left;
+    background-color:black !important;
+    color: white !important; /* Color del texto para celdas */
+    }
+.dark-mode table.table td:hover,
+.dark-mode table.table th:hover {
+    background-color: #333 !important; /* color de fondo al pasar el mouse */
+    color: white !important; /* color del texto al pasar el mouse */
+    cursor: pointer;
+    }
+.dark-mode a{
+    color: lightblue !important; 
+    }
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    }
+.dark-mode .toggle-button {
+    background-color: darkgray;
+    color: white;
+    }
+.dark-mode  .color{
+    background-color: black !important;
+ color:#F0F6FD;
+}
+.dark-mode .titulo-rodolfo:hover{
+    color: #333 !important;
+  }
+/*navbar*/
+  :host-context(body.dark-mode) nav {
+    background-color: black !important;
+ 
+  }
+  
+  :host-context(body.dark-mode) .nav-link,
+  :host-context(body.dark-mode) .titulo-rodolfo {
+    color: white !important;
+  }
+  :host-context(body.dark-mode) .nav-link:hover,
+:host-context(body.dark-mode) .titulo-rodolfo:hover {
+  color: #333 !important; /* o cualquier color que contraste */
+}
+
+  :host-context(body.dark-mode) .img-perfil {
+    border: 2px solid white;
+  }
+/*Footer*/
+
+
+  :host-context(body.dark-mode) .footer {
+    background-color: black !important;
+    color: #f8f9fa !important;
+  }
+
+  :host-context(body.dark-mode) .titulo-contacto,
+  :host-context(body.dark-mode) .copyright {
+    color: white !important;
+    background-color: #333 !important;
+  }
+
+  :host-context(body.dark-mode) .img-item:hover {
+    filter: brightness(1.5)!important;
+  }
+
+  :host-context(body.dark-mode) .titulo-contacto,
+  :host-context(body.dark-mode) .copyright {
+    background-color: black !important;
+  }
+
+/*estilos del modo oscuro*/  
+  .toggle-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+   
+  }

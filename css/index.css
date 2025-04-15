@@ -1,8 +1,7 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 body {
   background-color: #95AEE9 !important;;
@@ -14,61 +13,48 @@ body {
 .accordion-content {
   padding-bottom: 200px; /* o lo que sea necesario */
 }
-
-
 .imagen-contenedor {
-    width: 300px;        /* Ajusta el ancho que quieras */
-    height: 200px;       /* Ajusta la altura que quieras */
-    overflow: hidden;    /* Oculta lo que sobresale */
+  width: 300px;        /* Ajusta el ancho que quieras */
+  height: 200px;       /* Ajusta la altura que quieras */
+  overflow: hidden;    /* Oculta lo que sobresale */
   }
-
 .img-contenedor img{
-    width: 20%;
+  width: 20%;
   height: auto;
   object-fit: cover;   /* Hace que se recorte la imagen para llenar el contenedor */
   border: -40px solid #fff;
-
 }
-
 .imagen-circular {
-    width: 200px;             /* Tamaño del círculo */
-    height: 200px;
-    border-radius: 50%;       /* Hace el círculo */
-    overflow: hidden;         /* Oculta lo que sobresale */
-    border: 4px solid #fff;   /* Borde opcional */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra opcional */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
-    margin-top: 100px;
+  width: 200px;             /* Tamaño del círculo */
+  height: 200px;
+  border-radius: 50%;       /* Hace el círculo */
+  overflow: hidden;         /* Oculta lo que sobresale */
+  border: 4px solid #fff;   /* Borde opcional */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra opcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  margin-top: 100px;
   }
-
-  .imagen-circular img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;        /* Recorta para llenar sin deformar */
+.imagen-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Recorta para llenar sin deformar */
+ }
+.img-rodolfo {
+  margin-top: 0px;
   }
-
-  .img-rodolfo {
-   margin-top: 0px;
-  }
-
-
-
   /* Personaliza el contenedor del popover */
-  .popover {
-    color: #394476 !important; /* Asegura que el color del texto se aplique */
-    border-color: #394476 !important; /* Asegura que el borde tenga el color deseado */
+.popover {
+  color: #394476 !important; /* Asegura que el color del texto se aplique */
+  border-color: #394476 !important; /* Asegura que el borde tenga el color deseado */
   }
-
-
 #btn-popover {
   background-color: #394476 !important; /* Color de fondo del botón */
   color: white !important; /* Color del texto */
   border-color: #394476 !important; /* Color del borde */
 }
-
 /* Estilo para el hover del botón */
 #btn-popover:hover {
   background-color: #95AEE9 !important; /* Fondo del hover */
@@ -76,7 +62,6 @@ body {
   border-color: #F0F6FD !important; /* Borde del hover */
   text-decoration: none !important; /* Quitar subrayado en hover */
 }
-
 /* Estilos personalizados para el contenido del popover */
 .popover.custom-popover {
   max-width: none !important; /* Permite expansión */
@@ -86,31 +71,24 @@ body {
   color: rgb(11, 7, 7) !important; /* Color del texto */
   border-color: #394476 !important; /* Color del borde del popover */
 }
-
 /* Estilo para el cuerpo del popover */
 .popover.custom-popover .popover-body {
   word-wrap: break-word ;
   text-align: justify ;
 }
-
 /* Acordeon */
-
 .texto{
   text-align: justify;
 }
-
 .fondo-colapse{
   background-color: #F7F7F7;
 }
-
 .color-colapse{
 color:#F7F7F7;
 }
-
 .punta-flecha{
   width: 20px;
 }
-
 
 /* Estilos personalizados para evitar que el contenido desaparezca del DOM */
 .accordion-body .accordion .collapse {

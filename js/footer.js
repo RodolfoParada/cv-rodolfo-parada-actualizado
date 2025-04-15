@@ -8,6 +8,7 @@ class footer extends HTMLElement {
     shadow.innerHTML = `
              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
               <link rel="stylesheet" href="css/footer.css"/>
+              <link rel="stylesheet" href="css/dark-mode.css"/>
    <footer class="footer text-white py-4 fixed-bottom">
     <div class="container">
       <h5 class="titulo-contacto cuadro-contacto">Contáctame</h5>
