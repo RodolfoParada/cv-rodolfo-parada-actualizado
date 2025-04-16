@@ -3,6 +3,15 @@ class ModoOscuro extends HTMLElement {
     super();
     this.isDarkMode = false;
     this.tooltipInstance = null;
+
+    // ✅ Aplicar modo oscuro inmediatamente si ya está guardado
+    const savedMode = localStorage.getItem('modo-oscuro');
+    if (savedMode === 'true') {
+      document.body.classList.add('dark-mode');
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
+      this.isDarkMode = true;
+    }
   }
 
   connectedCallback() {
@@ -16,18 +25,15 @@ class ModoOscuro extends HTMLElement {
 
     const toggleButton = this.querySelector('.toggle-button');
 
-    // Leer modo guardado en localStorage
-    const savedMode = localStorage.getItem('modo-oscuro');
-    if (savedMode === 'true') {
-      this.isDarkMode = true;
-      this.toggleDarkMode(); // aplica modo oscuro directamente
+    if (this.isDarkMode) {
+      this.toggleDarkMode(); // Aplica estilos al botón
     }
 
     this.tooltipInstance = new bootstrap.Tooltip(toggleButton);
 
     toggleButton.addEventListener('click', () => {
       this.isDarkMode = !this.isDarkMode;
-      localStorage.setItem('modo-oscuro', this.isDarkMode); // guardar en localStorage
+      localStorage.setItem('modo-oscuro', this.isDarkMode);
       this.toggleDarkMode();
     });
   }
