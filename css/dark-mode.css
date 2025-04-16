@@ -137,10 +137,3 @@ color: #333 !important; /* o cualquier color que contraste */
   cursor: pointer;
  
 }
-/* Estilos generales */
-
-
-html.dark-mode body {
-  background-color: black !important;
-  color: white !important;
-}
