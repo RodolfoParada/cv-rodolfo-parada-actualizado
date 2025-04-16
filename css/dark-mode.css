@@ -74,6 +74,9 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
   }
+
+
+
 .dark-mode .toggle-button {
   background-color: darkgray;
   color: white;
@@ -126,14 +129,3 @@ color: #333 !important; /* o cualquier color que contraste */
   background-color: black !important;
 }
 
-/*estilos del modo oscuro*/  
-.toggle-button {
-  font-size: 20px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  cursor: pointer;
- 
-}
