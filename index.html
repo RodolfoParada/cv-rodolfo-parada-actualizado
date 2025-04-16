@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/dark-mode.css">
     <script>
-        // Aplicar clase antes de que se pinte el contenido
-        if (localStorage.getItem('modo-oscuro') === 'true') {
-          document.documentElement.classList.add('dark-mode');
-        }
+       (function() {
+    const savedMode = localStorage.getItem('modo-oscuro');
+    if (savedMode === 'true') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
       </script>
       
     <title>Sobre mí</title>

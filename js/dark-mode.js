@@ -3,15 +3,6 @@ class ModoOscuro extends HTMLElement {
     super();
     this.isDarkMode = false;
     this.tooltipInstance = null;
-
-    // ✅ Aplicar modo oscuro inmediatamente si ya está guardado
-    const savedMode = localStorage.getItem('modo-oscuro');
-    if (savedMode === 'true') {
-      document.body.classList.add('dark-mode');
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
-      this.isDarkMode = true;
-    }
   }
 
   connectedCallback() {
@@ -25,8 +16,11 @@ class ModoOscuro extends HTMLElement {
 
     const toggleButton = this.querySelector('.toggle-button');
 
-    if (this.isDarkMode) {
-      this.toggleDarkMode(); // Aplica estilos al botón
+    // Leer estado guardado en localStorage
+    const savedMode = localStorage.getItem('modo-oscuro');
+    if (savedMode === 'true') {
+      this.isDarkMode = true;
+      this.toggleDarkMode();
     }
 
     this.tooltipInstance = new bootstrap.Tooltip(toggleButton);
@@ -41,30 +35,29 @@ class ModoOscuro extends HTMLElement {
   toggleDarkMode() {
     const toggleButton = this.querySelector('.toggle-button');
 
+    // Eliminar tooltip anterior (necesario para que actualice el title)
     if (this.tooltipInstance) {
       this.tooltipInstance.dispose();
     }
 
     if (this.isDarkMode) {
       document.body.classList.add('dark-mode');
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
-
+      document.body.removeAttribute('style'); // limpiar estilo en línea si existía
       toggleButton.textContent = '☀️';
       toggleButton.setAttribute('title', 'Modo Oscuro');
-      toggleButton.style.color = '#333';
-      toggleButton.style.backgroundColor = '#333';
     } else {
       document.body.classList.remove('dark-mode');
-      document.body.style.backgroundColor = 'white';
+      document.body.removeAttribute('style'); // limpiar estilos anteriores
+
+      // Establecer explícitamente el color de fondo del modo claro si es necesario
+      document.body.style.backgroundColor = '#95AEE9';
       document.body.style.color = 'black';
 
       toggleButton.textContent = '🌙';
       toggleButton.setAttribute('title', 'Modo Claro');
-      toggleButton.style.color = '#95AEE9';
-      toggleButton.style.backgroundColor = '#95AEE9';
     }
 
+    // Volver a crear el tooltip con el nuevo título
     this.tooltipInstance = new bootstrap.Tooltip(toggleButton);
   }
 }
