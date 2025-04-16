@@ -16,11 +16,18 @@ class ModoOscuro extends HTMLElement {
 
     const toggleButton = this.querySelector('.toggle-button');
 
-    // Inicializar tooltip al montar el componente
+    // Leer modo guardado en localStorage
+    const savedMode = localStorage.getItem('modo-oscuro');
+    if (savedMode === 'true') {
+      this.isDarkMode = true;
+      this.toggleDarkMode(); // aplica modo oscuro directamente
+    }
+
     this.tooltipInstance = new bootstrap.Tooltip(toggleButton);
 
     toggleButton.addEventListener('click', () => {
       this.isDarkMode = !this.isDarkMode;
+      localStorage.setItem('modo-oscuro', this.isDarkMode); // guardar en localStorage
       this.toggleDarkMode();
     });
   }
@@ -28,13 +35,11 @@ class ModoOscuro extends HTMLElement {
   toggleDarkMode() {
     const toggleButton = this.querySelector('.toggle-button');
 
-    // Eliminar el tooltip antiguo antes de cambiar
     if (this.tooltipInstance) {
       this.tooltipInstance.dispose();
     }
 
     if (this.isDarkMode) {
-      // Activar modo oscuro
       document.body.classList.add('dark-mode');
       document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
@@ -44,7 +49,6 @@ class ModoOscuro extends HTMLElement {
       toggleButton.style.color = '#333';
       toggleButton.style.backgroundColor = '#333';
     } else {
-      // Activar modo claro
       document.body.classList.remove('dark-mode');
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
@@ -55,7 +59,6 @@ class ModoOscuro extends HTMLElement {
       toggleButton.style.backgroundColor = '#95AEE9';
     }
 
-    // Vuelves a inicializar el tooltip actualizado
     this.tooltipInstance = new bootstrap.Tooltip(toggleButton);
   }
 }

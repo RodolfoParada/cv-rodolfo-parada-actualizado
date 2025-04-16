@@ -11,7 +11,7 @@ class footer extends HTMLElement {
               <link rel="stylesheet" href="css/dark-mode.css"/>
    <footer class="footer text-white py-4 fixed-bottom">
     <div class="container">
-      <h5 class="titulo-contacto cuadro-contacto">Contáctame</h5>
+      <h5 class="titulo-contacto cuadro-contacto" data-bs-toggle="tooltip" title="Puedes contactarme desde el icono de LinkedIn">Contáctame</h5>
       <div class="row justify-content-between align-items-center">
         
         <!-- Lista izquierda -->
