@@ -11,7 +11,7 @@ main {
 min-height: 100vh;
 overflow-y: auto;
 }
-body {
+.light-mode body {
 background-color: #95AEE9 !important;;
 }
 

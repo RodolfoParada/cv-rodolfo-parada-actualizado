@@ -4,7 +4,7 @@ html, body {
     font-family: Arial, sans-serif;
   
 }
-body {
+.light-mode body {
   background-color: #95AEE9 !important;;
 }
 .experiencia {
