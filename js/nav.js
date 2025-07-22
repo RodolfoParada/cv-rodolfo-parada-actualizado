@@ -27,7 +27,7 @@ class Navegacion extends HTMLElement {
             </ul>
             <!-- Aquí insertas tu componente modo oscuro -->
             <mi-modo-oscuro style="width: 40px; height: 40px; object-fit: cover; margin-left: 700px;"></mi-modo-oscuro>
-            <img src="assets/images/rodolfo2.jpg" alt="Perfil" class="rounded-circle img-perfil"
+            <img src="assets/images/rodolfo1.jpg" alt="Perfil" class="rounded-circle img-perfil"
               style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
           </div>
         </div>
