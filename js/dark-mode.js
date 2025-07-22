@@ -8,7 +8,7 @@ class ModoOscuro extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/dark-mode.css" />
+    
       <button class="toggle-button btn btn-outline-light ms-3"
         data-bs-toggle="tooltip"
         title="Modo Claro">🌙</button>
