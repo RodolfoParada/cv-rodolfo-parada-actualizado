@@ -44,7 +44,7 @@ class ModoOscuro extends HTMLElement {
       document.body.classList.add('dark-mode');
       document.body.removeAttribute('style'); // limpiar estilo en línea si existía
       toggleButton.textContent = '☀️';
-      toggleButton.setAttribute('title', 'Modo Oscuro');
+      toggleButton.setAttribute('title', 'Modo Claro');
     } else {
       document.body.classList.remove('dark-mode');
       document.body.removeAttribute('style'); // limpiar estilos anteriores
@@ -54,7 +54,7 @@ class ModoOscuro extends HTMLElement {
       document.body.style.color = 'black';
 
       toggleButton.textContent = '🌙';
-      toggleButton.setAttribute('title', 'Modo Claro');
+      toggleButton.setAttribute('title', 'Modo Oscuro');
     }
 
     // Volver a crear el tooltip con el nuevo título
