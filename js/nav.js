@@ -26,9 +26,12 @@ class Navegacion extends HTMLElement {
               <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
             </ul>
             <!-- Aquí insertas tu componente modo oscuro -->
-            <mi-modo-oscuro style="width: 40px; height: 40px; object-fit: cover; margin-left: 700px;"></mi-modo-oscuro>
-            <img src="assets/images/rodolfo2.jpg" alt="Perfil" class="rounded-circle img-perfil"
-              style="width: 40px; height: 40px; object-fit: cover; margin-left: auto;">
+           
+            <div class="d-flex align-items-center gap-2 ms-lg-auto mt-2 mt-lg-0">
+              <mi-modo-oscuro></mi-modo-oscuro>
+              <img src="assets/images/rodolfo2.jpg" alt="Perfil" class="rounded-circle img-perfil"
+              style="width: 40px; height: 40px; object-fit: cover;">
+            </div>
           </div>
         </div>
       </nav>
