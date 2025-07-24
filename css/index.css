@@ -246,3 +246,13 @@ table.table th:hover {
   color: #fff; /* color del texto al pasar el mouse */
   cursor: pointer;
 }
+
+.accordion-button.activo {
+  background-color: #394476 !important;
+  color: white !important;
+}
+
+.accordion-button.activo:hover {
+  background-color: #394476 !important; /* Para mantener el color en hover */
+  color: white !important;
+}

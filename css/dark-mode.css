@@ -189,3 +189,14 @@ body.dark-mode div.proyecto-card {
   border: 1px solid white   /* borde blanco solo en modo oscuro */
   /* texto blanco para que contraste */
 }
+
+/*modo oscuro de los acordeon*/
+body.dark-mode .accordion-button.activo {
+  background-color: #333 !important; /* color claro para contraste en modo oscuro */
+  color: white !important;           /* texto más oscuro */
+}
+
+body.dark-mode .accordion-button.activo:hover {
+  background-color:#333 !important;
+  color: white !important;
+}

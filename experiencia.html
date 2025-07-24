@@ -19,7 +19,7 @@
        <mi-acordeon data='[
         {
          "titulo": "ActiveIt.&nbsp;<img src=\"assets/experiencia/ActiveIt.png\" class=\"img-fluid rounded-top\" style=\"width: 80px; height: 25px;\" alt=\"ActiveIt\">",
-         "contenido": "<b>[Septiembre - 2022 – Julio 2024] ActiveIt | Cargo: Consultor.</b><br>Participe en dos proyectos:<br><br><b>Inicio de actividades</b>.<br>Formé parte del equipo de desarrollo, utilizando tecnología Vue. Js para el front-end y Spring Boot para el back-end.<br>Utilicé la metodología Scrum para la realización del proyecto. Herramientas adicionales GitHub, Postman y Visual<br>Studio code.<br>• Logros: Cumplimiento con los objetivos de cada sprint.<br><br><b>Control de Software Claro-VTR.</b><br>Gestioné el control de versiones mediante herramientas como GitLab, GitKraken y Sourcetree para asegurar la<br>ntegridad del código fuente.<br>• Logros: Implementé un sistema eficiente de control de versiones, asegurando la custodia y trazabilidad del código<br>fuente a lo largo del desarrollo."
+         "contenido": "<b>[Septiembre - 2022 – Julio 2024] ActiveIt | Cargo: Consultor.</b><br>Participe en dos proyectos:<br><br><b>Inicio de actividades</b>.<br>Formé parte del equipo de desarrollo, utilizando tecnología Vue. Js para el front-end y Spring Boot para el back-end.<br>Utilicé la metodología Scrum para la realización del proyecto. Herramientas adicionales GitHub, Postman y Visual<br>Studio code.<br>• Logros: Cumplimiento con los objetivos de cada sprint.<br><br><b>Control de Software Claro-VTR.</b><br>Gestioné el control de versiones mediante herramientas como GitLab, GitKraken y Sourcetree para asegurar la<br>Integridad del código fuente.<br>• Logros: Implementé un sistema eficiente de control de versiones, asegurando la custodia y trazabilidad del código<br>fuente a lo largo del desarrollo."
         },
         {
          "titulo": "Blockey Limitada. <img src=\"assets/experiencia/blokey.png\" class=\"img-fluid rounded-top\" style=\"width: 80px; height: 25px;\" alt=\"ActiveIt\">",
@@ -41,5 +41,28 @@
         <script src="js/footer.js" defer></script>
         <script src="js/acordeon.js" defer></script>
         <script src="js/dark-mode.js"></script>
+
+     <script>
+    
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".accordion-button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Remueve la clase activo de todos
+        buttons.forEach(btn => btn.classList.remove("activo"));
+        
+        // Agrega la clase solo al botón actual si no está colapsado
+        // (esperamos un momento porque Bootstrap primero hace toggle de clase)
+        setTimeout(() => {
+          if (!this.classList.contains("collapsed")) {
+            this.classList.add("activo");
+          }
+        }, 10); // pequeño delay para esperar a que Bootstrap actualice
+      });
+    });
+  });
+</script>
+     </script>   
 </body>
 </html>
