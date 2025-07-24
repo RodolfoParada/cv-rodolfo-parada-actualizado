@@ -76,7 +76,8 @@ class PaginacionCards extends HTMLElement {
         `).join('')}
       </div>
 
-      <div class="d-flex justify-content-end gap-2 my-3">
+      <div class="pagination-buttons-container mt-5">
+      <div class="d-flex flex-row justify-content-center justify-content-sm-end gap-2 w-100 mb-4">
         <button class="btn btn-primary btn-prev" ${this.currentPage === 0 ? 'disabled' : ''}>Anterior</button>
         <button class="btn btn-primary btn-next" ${end >= this._dataList.length ? 'disabled' : ''}>Siguiente</button>
       </div>

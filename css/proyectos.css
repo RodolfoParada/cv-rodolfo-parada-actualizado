@@ -144,3 +144,8 @@ body {
   border-color: white !important;
 }
 
+.pagination-buttons-container {
+  padding-bottom: 4rem; /* o más si tu footer es alto */
+  display: flex;
+  justify-content: flex-end; /* empuja el bloque a la derecha */
+}
