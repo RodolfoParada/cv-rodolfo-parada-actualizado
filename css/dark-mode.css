@@ -143,8 +143,13 @@ body.dark-mode .scroll-btn {
   color: white; /* si hay texto o íconos dentro, que se vean */
 }
 
+body.dark-mode #scrollLeft img {
+  content: url('../assets/portafolio/flecha-hacia-izquierda.svg');
+  background-color: white;
+  filter: invert(100%);
+}
 
-body.dark-mode .scroll-btn img {
+body.dark-mode #scrollRight img {
   content: url('../assets/portafolio/flecha-hacia-derecha.svg');
   background-color: white;
   filter: invert(100%);
