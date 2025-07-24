@@ -47,6 +47,26 @@ class Navegacion extends HTMLElement {
      });
  
      console.log("Componente <mi-navegacion> cargado correctamente");
+
+
+
+const img = document.querySelector('.scroll-btn img');
+
+if (document.body.classList.contains('dark-mode')) {
+  img.src = '../assets/portafolio/flecha-hacia-derecha.svg';
+} else {
+  img.src = '../assets/portafolio/flecha-hacia-derecha.svg';
+}
+
+
+const img2 = document.querySelector('.scroll-btn img');
+
+if (document.body.classList.contains('dark-mode')) {
+  img.src = '../assets/portafolio/flecha-hacia-izquierda.svg';
+} else {
+  img.src = '../assets/portafolio/flecha-hacia-izquierda.svg';
+}
+
    }
 }
 

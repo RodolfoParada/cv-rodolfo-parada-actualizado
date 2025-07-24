@@ -129,3 +129,23 @@ color: #333 !important; /* o cualquier color que contraste */
   background-color: black !important;
 }
 
+/* Estilo en modo oscuro */
+body.dark-mode .nav-tabs .nav-link.active {
+  background-color: #222;
+  color: #fff !important;
+  border-color: #444;
+}
+
+
+body.dark-mode .scroll-btn {
+  background-color: black; /* o el azul oscuro que prefieras */
+  border: 1px solid #222; /* borde más oscuro para el modo oscuro */
+  color: white; /* si hay texto o íconos dentro, que se vean */
+}
+
+
+body.dark-mode .scroll-btn img {
+  content: url('../assets/portafolio/flecha-hacia-derecha.svg');
+  background-color: white;
+  filter: invert(100%);
+}
