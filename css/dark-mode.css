@@ -166,3 +166,22 @@ body.dark-mode .nav-tabs .nav-link.active {
   color: #fff !important;
   border-color: #555;
 }
+
+body.dark-mode .proyecto-card {
+  border: 1px solid white;
+}
+
+
+/*botones de las card modo oscuro*/
+/* Estilos para modo oscuro */
+body.dark-mode .btn-primary {
+  background-color:  black !important;
+  border-color: #95AEE9 !important;
+  color: white !important;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #333 !important;
+  border-color: white !important;
+  color: white !important;
+}
