@@ -136,7 +136,6 @@ body.dark-mode .nav-tabs .nav-link.active {
   border-color: #444;
 }
 
-
 body.dark-mode .scroll-btn {
   background-color: black; /* o el azul oscuro que prefieras */
   border: 1px solid #222; /* borde más oscuro para el modo oscuro */
@@ -153,4 +152,17 @@ body.dark-mode #scrollRight img {
   content: url('../assets/portafolio/flecha-hacia-derecha.svg');
   background-color: white;
   filter: invert(100%);
+}
+
+
+/* Modo oscuro: texto blanco para todas las pestañas */
+body.dark-mode .nav-tabs .nav-link {
+  color: #fff !important;
+}
+
+/* Modo oscuro: pestaña activa con fondo gris más oscuro */
+body.dark-mode .nav-tabs .nav-link.active {
+  background-color: #333;
+  color: #fff !important;
+  border-color: #555;
 }
