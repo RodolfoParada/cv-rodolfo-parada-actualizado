@@ -176,7 +176,14 @@ class proyectoBackend extends HTMLElement {
       `;
       paginador.dataList = proyectos;
     }
-
+// después de renderizar las cards:
+const root = this; // o pc.shadowRoot si renderizas dentro de <paginacion-cards> con Shadow DOM
+root.querySelectorAll('.proyecto-card').forEach(card => {
+  const el = card.querySelector('.carousel');
+  const inst = bootstrap.Carousel.getOrCreateInstance(el);
+  card.querySelector('.carousel-control-next')?.addEventListener('click', e => { e.preventDefault(); inst.next(); });
+  card.querySelector('.carousel-control-prev')?.addEventListener('click', e => { e.preventDefault(); inst.prev(); });
+});
   }
 }
 

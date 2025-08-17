@@ -2,12 +2,12 @@ class proyectoLogica extends HTMLElement {
   connectedCallback() {
     const proyectos = [
       {
-        titulo: "Clon Ejemplo Netflix 1",
+        titulo: "Clon Ejemplo Lógica 1",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -15,7 +15,7 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Spotify 2",
+        titulo: "Clon Ejemplo Lógica 2",
         descripcion: "Interfaz similar a Spotify construida con React.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
@@ -28,27 +28,25 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Twitter 3",
+        titulo: "Clon Ejemplo Lógica 3",
         descripcion: "Simulación de la red social usando Vue.js.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
         ]
       },
         {
-        titulo: "Clon Ejemplo Netflix 4",
+        titulo: "Clon Ejemplo Lógica 4",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -56,7 +54,7 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Spotify 5",
+        titulo: "Clon Ejemplo Lógica 5",
         descripcion: "Interfaz similar a Spotify construida con React.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
@@ -69,27 +67,25 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Twitter 6",
+        titulo: "Clon Ejemplo Lógica 6",
         descripcion: "Simulación de la red social usando Vue.js.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
         ]
       },
        {
-        titulo: "Clon Ejemplo Netflix 7",
+        titulo: "Clon Ejemplo Lógica 7",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -97,7 +93,7 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Spotify 8",
+        titulo: "Clon Ejemplo Lógica 8",
         descripcion: "Interfaz similar a Spotify construida con React.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
@@ -110,15 +106,13 @@ class proyectoLogica extends HTMLElement {
         ]
       },
       {
-        titulo: "Clon Ejemplo Twitter 9",
+        titulo: "Clon Ejemplo Lógica 9",
         descripcion: "Simulación de la red social usando Vue.js.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -177,6 +171,14 @@ class proyectoLogica extends HTMLElement {
       paginador.dataList = proyectos;
     }
 
+     // después de renderizar las cards:
+     const root = this; // o pc.shadowRoot si renderizas dentro de <paginacion-cards> con Shadow DOM
+     root.querySelectorAll('.proyecto-card').forEach(card => {
+     const el = card.querySelector('.carousel');
+     const inst = bootstrap.Carousel.getOrCreateInstance(el);
+     card.querySelector('.carousel-control-next')?.addEventListener('click', e => { e.preventDefault(); inst.next(); });
+     card.querySelector('.carousel-control-prev')?.addEventListener('click', e => { e.preventDefault(); inst.prev(); });
+    });
   }
 }
 
