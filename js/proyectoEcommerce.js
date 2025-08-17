@@ -2,13 +2,13 @@ class proyectoEcommerce extends HTMLElement {
   connectedCallback() {
     const proyectos = [
       {
-        titulo: "Proyecto e-commerce wenupillán 1",
-        descripcion: "Se desarrolló una página web donde se mejora la accesibilidad y está centrada en el usuario; se mejoró la arquitectura de la página web www.wenupillan.cl.",
+        titulo: "Proyecto e-commerce wenupillán ",
+        descripcion: "Se desarrolló una página web donde se mejora la accesibilidad y está centrada en el usuario; se mejoró la arquitectura de la página web www.wenupillan.cl, se simula un carrito de compra.",
         lenguaje: "En el proyecto se utiliza HTML, CSS, JS, Bootstrap",
-        texto:"",
+        texto:"Se desarrollaron componentes reutilizables utilizando JavaScript puro.",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/RodolfoParada/version-mejorada-wenupillan",
-        vista: "https://github.com/tuusuario/clon-twitter", 
+        vista: "https://rodolfoparada.github.io/version-mejorada-wenupillan/", 
         imagenes: [
          "assets/ecommerce/wenupillan-home.png",
          "assets/ecommerce/wenupillan-quienesSomos.png",
@@ -164,7 +164,7 @@ class proyectoEcommerce extends HTMLElement {
                 <div class="d-flex gap-2">
                   ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
                   ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
-                 ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>` : ''}
+                  ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>` : ''}
                 </div>
               </div>
             </div>
@@ -198,6 +198,19 @@ class proyectoEcommerce extends HTMLElement {
      card.querySelector('.carousel-control-next')?.addEventListener('click', e => { e.preventDefault(); inst.next(); });
      card.querySelector('.carousel-control-prev')?.addEventListener('click', e => { e.preventDefault(); inst.prev(); });
     });
+
+const botonesContainer = card.querySelector('.d-flex.gap-2');
+p.botones.forEach(b => {
+  const btn = document.createElement('a');
+  btn.href = b.url;
+  btn.target = '_blank';
+  btn.className = `btn ${b.clase} btn-sm`;
+  btn.textContent = b.texto;
+  botonesContainer.appendChild(btn);
+});
+
+
+
   }
 }
 
