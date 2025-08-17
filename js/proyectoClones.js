@@ -5,9 +5,9 @@ class proyectoClones extends HTMLElement {
         titulo: "Clon Ejemplo Netflix 1",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -22,9 +22,9 @@ class proyectoClones extends HTMLElement {
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
         ]
       },
       {
@@ -34,9 +34,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -46,9 +44,9 @@ class proyectoClones extends HTMLElement {
         titulo: "Clon Ejemplo Netflix 4",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -75,9 +73,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -87,9 +83,9 @@ class proyectoClones extends HTMLElement {
         titulo: "Clon Ejemplo Netflix 7",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -116,9 +112,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -155,7 +149,7 @@ class proyectoClones extends HTMLElement {
               </div>
             </div>
             <div class="col-md-6">
-              <div id="carousel-${p.titulo.replace(/\s+/g, '')}" class="carousel slide" data-bs-ride="carousel">
+              <div id="carousel-clones${p.titulo.replace(/\s+/g, '')}" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   ${p.imagenes.map((img, i) => `
                     <div class="carousel-item ${i === 0 ? 'active' : ''}">
@@ -163,10 +157,10 @@ class proyectoClones extends HTMLElement {
                     </div>
                   `).join('')}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${p.titulo.replace(/\s+/g, '')}" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-clones${p.titulo.replace(/\s+/g, '')}" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-${p.titulo.replace(/\s+/g, '')}" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-clones${p.titulo.replace(/\s+/g, '')}" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
               </div>

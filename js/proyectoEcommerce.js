@@ -1,13 +1,13 @@
 class proyectoEcommerce extends HTMLElement {
-connectedCallback() {
+  connectedCallback() {
     const proyectos = [
       {
         titulo: "Clon Ejemplo Netflix 1",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -22,9 +22,9 @@ connectedCallback() {
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
         ]
       },
       {
@@ -34,9 +34,7 @@ connectedCallback() {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -46,9 +44,9 @@ connectedCallback() {
         titulo: "Clon Ejemplo Netflix 4",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -75,9 +73,7 @@ connectedCallback() {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -87,9 +83,9 @@ connectedCallback() {
         titulo: "Clon Ejemplo Netflix 7",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
+        texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -116,9 +112,7 @@ connectedCallback() {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -126,7 +120,7 @@ connectedCallback() {
       }
     ];
 
-   this.innerHTML = `
+    this.innerHTML = `
       <link rel="stylesheet" href="css/proyectos.css"/>
       <link rel="stylesheet" href="css/dark-mode.css"/>
       <section class="mb-5">
@@ -134,6 +128,7 @@ connectedCallback() {
         <paginacion-cards></paginacion-cards>
       </section>
     `;
+
 
     const paginador = this.querySelector('paginacion-cards');
     if (paginador) {
@@ -155,7 +150,7 @@ connectedCallback() {
               </div>
             </div>
             <div class="col-md-6">
-              <div id="carousel-${p.titulo.replace(/\s+/g, '')}" class="carousel slide" data-bs-ride="carousel">
+              <div id="carousel-ecommerce${p.titulo.replace(/\s+/g, '')}" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   ${p.imagenes.map((img, i) => `
                     <div class="carousel-item ${i === 0 ? 'active' : ''}">
@@ -176,8 +171,22 @@ connectedCallback() {
       `;
       paginador.dataList = proyectos;
     }
+    // después de renderizar las cards:
+const root = this; // o pc.shadowRoot si renderizas dentro de <paginacion-cards> con Shadow DOM
+root.querySelectorAll('.proyecto-card').forEach(card => {
+  const el = card.querySelector('.carousel');
+  const inst = bootstrap.Carousel.getOrCreateInstance(el);
+  card.querySelector('.carousel-control-next')?.addEventListener('click', e => { e.preventDefault(); inst.next(); });
+  card.querySelector('.carousel-control-prev')?.addEventListener('click', e => { e.preventDefault(); inst.prev(); });
+});
+
+
+
 
   }
 }
 
+
+
 customElements.define('proyecto-ecommerce', proyectoEcommerce);
+
