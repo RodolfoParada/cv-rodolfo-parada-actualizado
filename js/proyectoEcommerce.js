@@ -2,16 +2,24 @@ class proyectoEcommerce extends HTMLElement {
   connectedCallback() {
     const proyectos = [
       {
-        titulo: "Clon Ejemplo Ecommerce 1",
+        titulo: "Proyecto e-commerce wenupillán 1",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
+        codigo: "https://github.com/RodolfoParada/version-mejorada-wenupillan",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/ecommerce/wenupillan-home.png",
+         "assets/ecommerce/wenupillan-quienesSomos.png",
+         "assets/ecommerce/wenupillan-restaurant.png",
+         "assets/ecommerce/wenupillan-tienda.png",
+         "assets/ecommerce/wenupillan-contacto.png",
+         "assets/ecommerce/wenupillan-machi.png",
+         "assets/ecommerce/wenupillan-toki.png",
+         "assets/ecommerce/wenupillan-weichafe.png",
+         "assets/ecommerce/wenupillan-lonko.png",
+       
         ]
       },
       {
@@ -21,6 +29,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -34,6 +43,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -47,6 +57,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -60,6 +71,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -73,6 +85,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -86,6 +99,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -99,6 +113,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -112,6 +127,7 @@ class proyectoEcommerce extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://github.com/tuusuario/clon-twitter", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -123,6 +139,7 @@ class proyectoEcommerce extends HTMLElement {
     this.innerHTML = `
       <link rel="stylesheet" href="css/proyectos.css"/>
       <link rel="stylesheet" href="css/dark-mode.css"/>
+      <link rel="stylesheet" href="css/ecommerce.css"/>
       <section class="mb-5">
         <h5 class="fw-bold">Proyectos E-Commerce : Sitios de ventas de productos o servicios con carrito, pagos, etc.</h5>
         <paginacion-cards></paginacion-cards>
@@ -135,6 +152,7 @@ class proyectoEcommerce extends HTMLElement {
       paginador.cardRenderer = (p) => `
       <link rel="stylesheet" href="css/proyectos.css"/>
       <link rel="stylesheet" href="css/dark-mode.css"/>
+        
         <div class="card mb-4 p-3 proyecto-card" style="background-color: #95AEE9;">
           <div class="row g-2">
             <div class="col-md-6">
@@ -144,8 +162,9 @@ class proyectoEcommerce extends HTMLElement {
                 <p class="card-text">${p.lenguaje}</p>
                 <p class="card-text">${p.texto}</p>
                 <div class="d-flex gap-2">
-                 ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
-                        ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
+                  ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
+                  ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
+                  ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>`: ''}
                 </div>
               </div>
             </div>
