@@ -3,9 +3,9 @@ class proyectoEcommerce extends HTMLElement {
     const proyectos = [
       {
         titulo: "Proyecto e-commerce wenupillán 1",
-        descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
-        lenguaje: "HTML, CSS, JS",
-        texto:"texto para elementos usados en el proyecto",
+        descripcion: "Se desarrolló una página web donde se mejora la accesibilidad y está centrada en el usuario; se mejoró la arquitectura de la página web www.wenupillan.cl.",
+        lenguaje: "En el proyecto se utiliza HTML, CSS, JS, Bootstrap",
+        texto:"",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/RodolfoParada/version-mejorada-wenupillan",
         vista: "https://github.com/tuusuario/clon-twitter", 
@@ -164,7 +164,7 @@ class proyectoEcommerce extends HTMLElement {
                 <div class="d-flex gap-2">
                   ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
                   ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
-                  ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>`: ''}
+                 ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>` : ''}
                 </div>
               </div>
             </div>
