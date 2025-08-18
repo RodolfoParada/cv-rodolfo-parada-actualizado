@@ -2,16 +2,23 @@ class proyectoClones extends HTMLElement {
   connectedCallback() {
     const proyectos = [
       {
-        titulo: "Clon Ejemplo Clones 1",
-        descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
+        titulo: "Clon Ministerio de Minería",
+        descripcion: "Es un Clon para simular la interfaz del Ministerio de Minería de Chile.",
         lenguaje: "HTML, CSS, JS",
-        texto:"texto para elementos usados en el proyecto",
+        texto:"",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
+          "assets/clones/ministerioMineria/ministerioMineria-inicio.png",
+          "assets/clones/ministerioMineria/ministerioMineria-mineria.png",
+          "assets/clones/ministerioMineria/ministerioMineria-queMineria.png",
+          "assets/clones/ministerioMineria/ministerioMineria-normativaVigente.png",
+          "assets/clones/ministerioMineria/ministerioMineria-servicios.png",
+          "assets/clones/ministerioMineria/ministerioMineria-bne.png",
+          "assets/clones/ministerioMineria/ministerioMineria-prensa.png",
+          "assets/clones/ministerioMineria/ministerioMineria-precioMetales.png",
+          "assets/clones/ministerioMineria/ministerioMineria-licitaciones.png"
+         
         ]
       },
       {
