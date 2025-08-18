@@ -7,7 +7,8 @@ class proyectoClones extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
+        codigo: "https://github.com/RodolfoParada/clones-paginas-web",
+        vista: "https://rodolfoparada.github.io/clones-paginas-web/index.html", 
         imagenes: [
           "assets/clones/ministerioMineria/ministerioMineria-inicio.png",
           "assets/clones/ministerioMineria/ministerioMineria-mineria.png",
@@ -28,6 +29,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com",  
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -41,6 +43,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -54,6 +57,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -67,6 +71,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -80,6 +85,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -93,6 +99,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -106,6 +113,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com",  
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -119,6 +127,7 @@ class proyectoClones extends HTMLElement {
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
         codigo: "https://github.com/tuusuario/clon-twitter",
+        vista: "https://tu-video-twitter.com", 
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -149,10 +158,11 @@ class proyectoClones extends HTMLElement {
                 <p class="card-text">${p.descripcion}</p>
                 <p class="card-text">${p.lenguaje}</p>
                 <p class="card-text">${p.texto}</p>
-                <div class="d-flex gap-2">
-                 ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
-                        ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
-                </div>
+                 <div class="d-flex gap-2">
+                   ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
+                   ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
+                   ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>` : ''}                
+                 </div>
               </div>
             </div>
             <div class="col-md-6">
