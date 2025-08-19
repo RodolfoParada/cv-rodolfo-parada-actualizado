@@ -3,7 +3,7 @@ class proyectoUX extends HTMLElement {
     const proyectos = [
       {
         titulo: "Proyecto UX wenupillan.cl",
-        descripcion: "Se analizo el sitio web wenupillan.cl del punto de vista UX",
+        descripcion: "Se analizó el sitio web wenupillan.cl del punto de vista UX.",
         lenguaje: "",
         texto:"Puedes verlo en Behance haciendo clic en el botón 'Ver Behance'.",
         video: "https://tu-video-twitter.com",
