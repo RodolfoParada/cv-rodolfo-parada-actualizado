@@ -2,16 +2,15 @@ class proyectoUX extends HTMLElement {
    connectedCallback() {
     const proyectos = [
       {
-        titulo: "Clon Ejemplo Proyecto UX 1",
-        descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
-        lenguaje: "HTML, CSS, JS",
+        titulo: "Proyecto UX wenupillan.cl",
+        descripcion: "Se analizo el sitio web wenupillan.cl del punto de vista UX",
+        lenguaje: "",
+        texto:"Puedes verlo en Behance haciendo clic en el botón 'Ver Behance'.",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
-        texto:"texto para elementos usados en el proyecto",
+        behance: "https://www.behance.net/gallery/232868237/Proyecto-Wenupillan",
         imagenes: [
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
-         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/proyectoUx/wenupillan/Portada-Ux.jpeg",
+         
         ]
       },
       {
@@ -20,7 +19,7 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
+        behance: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -33,10 +32,8 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        behance: "https://github.com/tuusuario/clon-twitter", 
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -46,9 +43,9 @@ class proyectoUX extends HTMLElement {
         titulo: "Clon Ejemplo Proyecto UX 4",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
-        video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
         texto:"texto para elementos usados en el proyecto",
+        video: "https://tu-video-twitter.com",
+        behance: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -61,7 +58,7 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
+        behance: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
         "assets/Mantenimiento/Mantenimiento.png",
         "assets/Mantenimiento/Mantenimiento.png",
@@ -74,10 +71,8 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        behance: "https://github.com/tuusuario/clon-twitter",
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -87,9 +82,9 @@ class proyectoUX extends HTMLElement {
         titulo: "Clon Ejemplo Proyecto UX 7",
         descripcion: "Aplicación que simula la interfaz de Netflix con HTML, CSS y JS.",
         lenguaje: "HTML, CSS, JS",
-        video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
         texto:"texto para elementos usados en el proyecto",
+        video: "https://tu-video-twitter.com",
+        behance: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -102,11 +97,11 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
+        behance: "https://github.com/tuusuario/clon-twitter",
         imagenes: [
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
-        "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
+         "assets/Mantenimiento/Mantenimiento.png",
         ]
       },
       {
@@ -115,10 +110,8 @@ class proyectoUX extends HTMLElement {
         lenguaje: "HTML, CSS, JS",
         texto:"texto para elementos usados en el proyecto",
         video: "https://tu-video-twitter.com",
-        codigo: "https://github.com/tuusuario/clon-twitter",
-        video: "https://tu-demo-netflix.com",
-        código: "https://github.com/tuusuario/clon-netflix",
-           imagenes: [
+        behance: "https://github.com/tuusuario/clon-twitter",
+        imagenes: [
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
          "assets/Mantenimiento/Mantenimiento.png",
@@ -150,7 +143,7 @@ class proyectoUX extends HTMLElement {
                 <p class="card-text">${p.texto}</p>
                 <div class="d-flex gap-2">
                  ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
-                        ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
+                 ${p.behance ? `<a href="${p.behance}" target="_blank" class="btn btn-primary btn-sm">Ver Behance</a>` : ''}
                 </div>
               </div>
             </div>

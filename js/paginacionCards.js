@@ -52,6 +52,7 @@ class PaginacionCards extends HTMLElement {
                     ${p.video ? `<a href="${p.video}" target="_blank" class="btn btn-dark btn-primary btn-sm">Video</a>` : ''}
                     ${p.codigo ? `<a href="${p.codigo}" target="_blank" class="btn btn-primary btn-sm">Código</a>` : ''}
                     ${p.vista ? `<a href="${p.vista}" target="_blank" class="btn btn-primary btn-sm">Ver Proyecto</a>` : ''}
+                    ${p.behance ? `<a href="${p.behance}" target="_blank" class="btn btn-primary btn-sm">Ver Behance</a>` : ''}
                   </div>
                 </div>
               </div>
