@@ -10,7 +10,10 @@ class proyectoUX extends HTMLElement {
         behance: "https://www.behance.net/gallery/232868237/Proyecto-Wenupillan",
         imagenes: [
          "assets/proyectoUx/wenupillan/Portada-Ux.jpeg",
-         
+         "assets/proyectoUx/wenupillan/página2.jpg",
+         "assets/proyectoUx/wenupillan/página4.jpg",
+         "assets/proyectoUx/wenupillan/página3.jpg",
+         "assets/proyectoUx/wenupillan/página5.jpg",      
         ]
       },
       {
