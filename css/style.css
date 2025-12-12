@@ -1,0 +1,597 @@
+/* ======================================= */
+/* 1. ESTILOS BASE (De index.css y formacion.css) */
+/* ======================================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  background-color: #95AEE9 !important;
+}
+main {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* De index.css */
+.color-fondo{
+  background-color: #95AEE9 !important;
+}
+.accordion-content {
+  padding-bottom: 200px;
+}
+.imagen-contenedor {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+.img-contenedor img{
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  border: -40px solid #fff;
+}
+.imagen-circular {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  margin-top: 100px;
+}
+.imagen-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-rodolfo {
+  margin-top: 0px;
+}
+/* Personaliza el contenedor del popover */
+.popover {
+  color: #394476 !important;
+  border-color: #394476 !important;
+}
+#btn-popover {
+  background-color: #394476 !important;
+  color: white !important;
+  border-color: #394476 !important;
+}
+/* Estilo para el hover del botón */
+#btn-popover:hover {
+  background-color: #95AEE9 !important;
+  color: white !important;
+  border-color: #F0F6FD !important;
+  text-decoration: none !important;
+}
+/* Estilos personalizados para el contenido del popover */
+.popover.custom-popover {
+  max-width: none !important;
+  width: auto !important;
+  white-space: normal !important;
+  /* background-color: #394476; Color de fondo del popover */
+  color: rgb(11, 7, 7) !important;
+  border-color: #394476 !important;
+}
+/* Estilo para el cuerpo del popover */
+.popover.custom-popover .popover-body {
+  word-wrap: break-word;
+  text-align: justify;
+}
+/* Acordeon */
+.texto{
+  text-align: justify;
+}
+.fondo-colapse{
+  background-color: #F7F7F7;
+}
+.color-colapse{
+  color: #F7F7F7;
+}
+.punta-flecha{
+  width: 20px;
+}
+
+/* Estilos personalizados para evitar que el contenido desaparezca del DOM */
+.accordion-body .accordion .collapse {
+  display: block !important;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.accordion-body .accordion .collapse.show {
+  height: auto;
+}
+
+.accordion-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+/* Ocultar la flecha predeterminada de Bootstrap */
+.accordion-button::after {
+  display: none !important;
+}
+/* Personalización del botón */
+.custom-button {
+  display: flex;
+  justify-items: end;
+  gap: 10px;
+  position: relative
+}
+
+
+/* Ocultar la flecha predeterminada de Bootstrap */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Estilo del botón del acordeón */
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding-right: 50px;
+}
+
+
+.icon-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Asegurar que las imágenes sean visibles */
+.icon-container img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+/* Ocultar el icono "cerrado" cuando el acordeón está colapsado */
+.icon-close {
+  display: none;
+}
+
+/* Mostrar la imagen correcta al abrir/cerrar el acordeón */
+.accordion-button:not(.collapsed) .icon-open {
+  display: none;
+}
+.accordion-button:not(.collapsed) .icon-close {
+  display: inline;
+}
+/* Elimina el color celeste de fondo al hacer clic */
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Evita que el acordeón cambie de color al expandirse */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-header:hover {
+  background-color: #394476;
+  color: white;
+}
+
+/* Personaliza el color del borde si es necesario */
+.accordion-item {
+  border: 1px solid #ddd;
+}
+
+
+.izquierda {
+  display: inline-block;
+  position: relative;
+
+}
+
+.izquierda::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: #394476;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transform: translateX(5%);
+}
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table.table th, table.table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: #95AEE9;
+}
+
+table.table .hidden-header th {
+  display: none;
+}
+
+th, td{
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Hover en cada celda */
+table.table td:hover,
+table.table th:hover {
+  background-color: #394476;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion-button.activo {
+  background-color: #394476 !important;
+  color: white !important;
+}
+
+.accordion-button.activo:hover {
+  background-color: #394476 !important;
+  color: white !important;
+}
+
+.formacion{
+    margin-top: 50px;
+}
+
+/* ======================================= */
+/* 2. ESTILOS EXPERIENCIA (De experiencia.css) */
+/* ======================================= */
+.light-mode body {
+  background-color: #95AEE9 !important;;
+}
+.experiencia {
+  /* margin-top: 100px;  Se recomienda compensar el navbar en main{} */
+  margin-top: 90px; /* Espaciado interno seguro */
+}
+
+/* ======================================= */
+/* 3. ESTILOS FORMACION (De formacion.css) */
+/* ======================================= */
+.formacion {
+    /* margin-top: 100px; Se recomienda compensar el navbar en main{} */
+    padding-top: 20px; /* Espaciado interno seguro */
+    padding-bottom: 150px;
+}
+
+/* ======================================= */
+/* 4. ESTILOS NAV (De nav.css) */
+/* ======================================= */
+.navbar {
+  margin-bottom: 0;
+}
+.color{
+  background-color: #394476;
+  color: #F0F6FD;
+}
+.titulo-rodolfo{
+  color: #F0F6FD;
+  text-decoration: none;
+  margin-right: 25px;
+}
+.titulo-rodolfo:hover{
+  color: #95AEE9 !important;
+}
+.navbar-nav .sobreMi{
+  color: #F0F6FD;
+}
+.nav-item .experiencia{
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.navbar-nav .formacion{
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.nav-item .proyectos{
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.nav-item .contactame{
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.nav-item .titulo{
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.nav-link {
+  color: #F0F6FD;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #95AEE9 !important;
+}
+
+
+.navbar-toggler{
+  background-color: #394476;
+  color: #95AEE9;;
+}
+.navbar-toggler::after {
+  font-family: FontAwesome;
+  color: #95AEE9;
+  font-size: 14px;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2395AEE9' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Estos estilos deben ser manejados por Bootstrap 5, pero se mantienen si son custom */
+.collapse {
+  display: none !important;
+}
+.collapse.show {
+  display: block !important;
+}
+/* Personalización del ícono hamburguesa (blanco en este ejemplo) */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* ======================================= */
+/* 5. ESTILOS PROYECTOS (De proyectos.css) */
+/* ======================================= */
+main {
+  /* Se repite la definicion de main del inicio, se asegura que el padding-bottom sea aplicado */
+  padding-bottom: 70px;
+}
+.proyectos {
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+/* Pestañas de carrusel  */
+.tabs-carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 2.5rem;
+}
+
+#categoriaTabs {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#categoriaTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Estilo para la pestaña activa */
+.nav-tabs .nav-link.active {
+  background-color: #394476;
+  color: #fff !important;
+  border-radius: 0.25rem;
+  border: 1px solid #394476;
+}
+
+/* Estilo para las pestañas inactivas */
+.nav-tabs .nav-link {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+}
+
+
+
+.scroll-btn img {
+  width: 24px;
+  height: 24px;
+  background-color: #95AEE9;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* controles de las pestañas del carrusel */
+.scroll-btn {
+  position: fixed;
+  top: 250px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  background-color: #95AEE9;
+  border: none;
+  border-radius: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.scroll-btn {
+  position: absolute;
+  top:0;
+  transform: translateY(50%);
+  pointer-events: all;
+}
+
+#scrollLeft {
+  left: 0px;
+  margin-top: -1.5%;
+}
+
+#scrollRight {
+  right: 0px;
+  margin-top: -1.5%;
+}
+
+
+/* estilos de los cards */
+.proyecto-card .btn {
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.proyecto-card .btn-dark {
+  background-color: #333;
+}
+
+.proyecto-card .btn-primary {
+  background-color: #007bff;
+}
+
+
+
+.btn-primary {
+  background-color: #394476 !important;
+  border-color: white !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #95AEE9 !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.pagination-buttons-container {
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ======================================= */
+/* 6. ESTILOS FOOTER (De footer.css) */
+/* ======================================= */
+.footer {
+  background-color: #394476;
+  color: #F0F6FD;
+  height: 125px;
+  text-align: center;
+  margin: 0;
+}
+.titulo-color {
+  color: #E4EEFB;
+}
+.img-linkedin, .img-github, .img-gmail, .img-item {
+  width: 30px;
+}
+
+.img-item {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+@media (max-width: 579px) {
+  .footer {
+    height: 168px;
+    padding: 0px 0;
+    text-align: center;
+  }
+}
+
+
+/* titulo de contactame footer */
+.titulo-contacto {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  animation: neonGlow 1.5s ease-in-out infinite alternate, floatUp 3s ease-out forwards;
+}
+/* Animación para el texto que hace que sobresalga y brille */
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #394476, 0 0 15px #394476, 0 0 20px #95AEE9, 0 0 30px #95AEE9, 0 0 40px #95AEE9;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 15px #394476, 0 0 20px #394476, 0 0 30px #95AEE9, 0 0 40px #95AEE9, 0 0 50px #95AEE9;
+  }
+}
+/* Animación para el movimiento del texto */
+@keyframes floatUp {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: -60px;
+    opacity: 1;
+  }
+}
+footer {
+  position: relative;
+}
+footer .container {
+  position: relative;
+}
+
+/* efectos del centro de linkedin y github */
+.centro-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.centro-image:hover {
+  transform: scale(1.2);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
