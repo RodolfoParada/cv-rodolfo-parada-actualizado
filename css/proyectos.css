@@ -7,8 +7,22 @@ html, body {
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
     height: 100%;
   }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;   /* Oculta la barra de scroll vertical */
+    height: 0;  /* Oculta la barra de scroll horizontal */
+    display: none; /* Propiedad de respaldo */
+}
+
+/* 2. Ocultar en Firefox */
+body {
+    scrollbar-width: none;  /* Oculta la barra de scroll */
+    -ms-overflow-style: none; /* Oculta en IE y Edge antiguo */
+}
+
 main {
-  min-height: 100vh;
+
   overflow-y: auto;
   padding-bottom: 70px; /* suficiente espacio para separar del footer */
 }
@@ -127,7 +141,7 @@ body {
 }
 
 .proyecto-card .btn-primary {
-  background-color: #95AEE9;
+  background-color: #007bff;
 }
 
 

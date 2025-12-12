@@ -1,5 +1,5 @@
 .navbar {
-    margin-bottom: 0 !important; /* Asegúrate de que no haya espacio debajo de la navbar */
+    margin-bottom: 0; /* Asegúrate de que no haya espacio debajo de la navbar */
   }
   .color{
       background-color:#394476;
