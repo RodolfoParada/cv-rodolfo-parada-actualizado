@@ -26,7 +26,7 @@ class Navegacion extends HTMLElement {
             </ul>
             <div class="d-flex align-items-center gap-2 ms-lg-auto mt-2 mt-lg-0">
               <mi-modo-oscuro></mi-modo-oscuro>
-              <img src="assets/images/rodolfo2.jpg" alt="Perfil" class="rounded-circle img-perfil"
+              <img src="assets/images/rodolfo3.png"  alt="Perfil" class="rounded-circle img-perfil"
               style="width: 40px; height: 40px; object-fit: cover;">
             </div>
           </div>

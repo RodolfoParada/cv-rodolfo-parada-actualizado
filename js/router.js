@@ -1,83 +1,167 @@
+// js/router.js
+
+// =================================================================
+// PASO 1: UTILIDAD PARA CARGAR SCRIPTS DINÁMICAMENTE
+// =================================================================
+const loadedScripts = new Set();
+const loadScript = (src) => {
+    return new Promise((resolve, reject) => {
+        // Protección 1: Si ya está en el Set, no lo cargamos de nuevo.
+        if (loadedScripts.has(src)) {
+            console.log(`Script ya cargado: ${src}`);
+            return resolve();
+        }
+
+        const script = document.createElement('script');
+        script.src = src;
+        script.defer = true;
+        
+        script.onload = () => {
+            loadedScripts.add(src);
+            resolve();
+        };
+        
+        script.onerror = (error) => {
+            console.error(`Error al cargar el script: ${src}`, error);
+            reject(new Error(`Failed to load script ${src}`));
+        };
+
+        document.head.appendChild(script);
+        console.log(`Cargando script: ${src}`);
+    });
+};
 
 
-// En js/router.js
-// Usamos el prefijo 'vistas/' en el valor de cada ruta
+// =================================================================
+// PASO 2: DEFINICIÓN DE RUTAS Y FUNCIÓN PRINCIPAL
+// RUTAS CORREGIDAS: Usan el prefijo 'vistas/' para los archivos de contenido.
+// =================================================================
 const routes = {
-    // Casos de carga inicial de Live Server
-    '/': 'vistas/index-content.html', 
-
-    // Casos de click en el NAV (Sin slash)
-    'index.html': 'vistas/index-content.html', 
-    'experiencia.html': 'vistas/experiencia-content.html',
-    'formacion.html': 'vistas/formacion-content.html',
-    'proyectos.html': 'vistas/proyectos-content.html',
-
-    // Casos de acceso directo en el navegador (Con slash)
-    '/index.html': 'vistas/index-content.html',
+    '/': 'vistas/index-content.html',
+    '/index.html': 'vistas/index-content.html', 
     '/experiencia.html': 'vistas/experiencia-content.html',
     '/formacion.html': 'vistas/formacion-content.html',
-    '/proyectos.html': 'vistas/proyectos-content.html',
+    '/proyectos.html': 'vistas/proyectos-content.html'
 };
-// ... el resto del código
-// ... el resto de la función navigateTo y el listener del DOM ...
+
+const contentArea = document.querySelector('main#spa-content');
+
+if (!contentArea) {
+    console.error('El elemento main#spa-content no se encontró en el DOM.');
+}
 
 async function navigateTo(pathname) {
-    const route = routes[pathname];
-    const contentArea = document.querySelector('main#spa-content'); 
+    if (!contentArea) return;
 
-    // PRUEBA DE FUEGO 1: Verifica que el contenedor existe
-    if (!contentArea) {
-        console.error("ERROR CRÍTICO: El elemento <main id='spa-content'> no se encontró.");
-        return; // Detiene la ejecución si el elemento no existe
-    }
+    // *** NORMALIZACIÓN DE RUTA ***
+    // 1. Eliminar parámetros de consulta (ej. ?foo=bar)
+    let normalizedPath = pathname.split('?')[0]; 
     
-    // PRUEBA DE FUEGO 2: Verifica que la ruta está definida
+    // 2. Asegurar que empiece con '/' si no es el caso (para rutas como 'index.html')
+    if (!normalizedPath.startsWith('/')) {
+        normalizedPath = '/' + normalizedPath;
+    }
+
+    // 3. Si la ruta es solo '/index.html', la tratamos como el inicio '/'
+    if (normalizedPath === '/index.html') {
+         normalizedPath = '/';
+    }
+
+    const routeKey = normalizedPath;
+    const route = routes[routeKey];
+    
     if (!route) {
-        contentArea.innerHTML = '<h1>404 | Página no encontrada por el router</h1>';
+        console.error(`Ruta no encontrada para: ${routeKey}`); 
+        contentArea.innerHTML = '<h1>404 - Página no encontrada</h1>';
+        window.history.pushState({}, routeKey, routeKey); 
         return;
     }
-    
+
     try {
+        // =================================================================
+        // *** LÓGICA DE CARGA DE DEPENDENCIAS ESPECÍFICAS DE LA VISTA ***
+        // Utilizamos la clave 'routeKey' (normalizada) para la lógica condicional.
+        // =================================================================
+        
+        // --- Carga de Acordeón y Popover ---
+        if (routeKey === '/formacion.html' || routeKey === '/experiencia.html' || routeKey === '/') {
+            await loadScript('js/acordeon.js'); 
+        }
+        
+        if (routeKey === '/') {
+            await loadScript('js/popover.js'); 
+        }
+
+        // --- Carga de todos los Componentes de Proyectos ---
+        if (routeKey === '/proyectos.html') {
+            console.log('Cargando dependencias de Proyectos...');
+            
+            await loadScript('js/paginacionCards.js');
+            await loadScript('js/proyectoClones.js');
+            await loadScript('js/proyectoCrud.js');
+            await loadScript('js/proyectoEcommerce.js');
+            await loadScript('js/proyectoDashboars.js');
+            await loadScript('js/proyectoIa.js');
+            await loadScript('js/proyectoBackend.js');
+            await loadScript('js/proyectoFrontend.js');
+            await loadScript('js/proyectoLogica.js');
+            await loadScript('js/proyectoJuegos.js');
+            await loadScript('js/proyectoFullStack.js');
+            await loadScript('js/proyectoEmpresariales.js');
+            await loadScript('js/proyectoSeguridad.js');
+            await loadScript('js/proyectoUX.js');
+            
+            await loadScript('js/proyectos-init.js'); 
+        }
+
+        // --- FETCH Y RENDERIZADO DEL CONTENIDO ---
         const response = await fetch(route);
-        
-        // Verifica si la carga del archivo falló (por ejemplo, 404)
+
         if (!response.ok) {
-            contentArea.innerHTML = `<h1>Error de carga: El archivo ${route} no existe (Status: ${response.status})</h1>`;
-            throw new Error(`Error al cargar ${route} (Status: ${response.status})`);
+            throw new Error(`Error al cargar el contenido de ${route}: ${response.statusText}`);
         }
-        
+
         const html = await response.text();
-        contentArea.innerHTML = html; 
-        window.history.pushState({}, pathname, pathname);
-        // Llamamos a la inicialización si existe (evita errores si no está definida)
-if (typeof window.initializeProyectosView === 'function') {
-    // Solo ejecutar si la vista contiene el selector (mejor práctica)
-    if (document.getElementById('categoriaTabs')) {
-        try {
-            window.initializeProyectosView();
-            console.log('initializeProyectosView ejecutada correctamente.');
-        } catch (err) {
-            console.error('Error al inicializar proyectos:', err);
-        }
-    }
-}
-
-        console.log(`Navegación exitosa a: ${pathname}. Contenido de ${route} cargado.`);
         
+        contentArea.innerHTML = html; 
+        
+        window.history.pushState({}, routeKey, routeKey); 
+        
+        // Llamada a la inicialización de proyectos
+        if (routeKey === '/proyectos.html' && typeof window.initializeProyectosView === "function") {
+            if (document.getElementById("categoriaTabs")) {
+                console.log("Inicializando vista de Proyectos...");
+                window.initializeProyectosView();
+            }
+        }
+        
+        console.log(`Navegación exitosa a: ${routeKey}. Contenido de ${route} cargado.`);
+
     } catch (error) {
-        console.error("Error de SPA routing:", error);
-        contentArea.innerHTML = `<h1>Error de carga: ${error.message}</h1>`;
+        console.error('Error durante la navegación:', error);
+        contentArea.innerHTML = `<h1>Error de Carga</h1><p>No se pudo cargar el contenido de la página: <strong>${route}</strong>. (Verifica la consola para 404)</p>`;
     }
 }
 
-// ⭐ Aseguramos que la función sea GLOBAL (para que nav.js la vea)
-window.navigateTo = navigateTo; 
-
+// =================================================================
+// PASO 3: MANEJO DE EVENTOS
+// =================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('popstate', () => {
-        navigateTo(window.location.pathname);
+    // Escuchamos clicks en cualquier enlace que termine en .html
+    document.body.addEventListener('click', e => {
+        const target = e.target.closest('a');
+        if (target && target.getAttribute('href') && target.getAttribute('href').endsWith('.html')) {
+            e.preventDefault();
+            const href = target.getAttribute('href');
+            navigateTo(href); 
+        }
     });
-    
-    // Carga la vista inicial al abrir la página
-    navigateTo(window.location.pathname); 
+
+    // Manejar el botón de retroceso/adelante del navegador
+    window.onpopstate = () => {
+        navigateTo(window.location.pathname);
+    };
+
+    // Cargar la vista inicial (usa la URL actual: / o /archivo.html)
+    navigateTo(window.location.pathname);
 });
