@@ -8,12 +8,11 @@ class Navegacion extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="./css/nav.css"/>
-       <link rel="stylesheet" href="css/dark-mode.css"/>
+      <link rel="stylesheet" href="css/dark-mode.css"/>
   
-    
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top color px-3">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top color px-3">
         <div class="container-fluid">
-          <a class="titulo-rodolfo fw-bold fs-5 text-white" href="#">Rodolfo Parada González</a>
+          <a class="titulo-rodolfo fw-bold fs-5 text-white" href="index.html">Rodolfo Parada González</a>
           
           <button class="navbar-toggler" id="btn-toggle" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -25,30 +24,47 @@ class Navegacion extends HTMLElement {
               <li class="nav-item"><a class="nav-link text-white" href="formacion.html">Formación</a></li>
               <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
             </ul>
-            <!-- Aquí insertas tu componente modo oscuro -->
-           
             <div class="d-flex align-items-center gap-2 ms-lg-auto mt-2 mt-lg-0">
               <mi-modo-oscuro></mi-modo-oscuro>
-              <img src="assets/images/rodolfo2.jpg" alt="Perfil" class="rounded-circle img-perfil"
+              <img src="assets/images/rodolfo3.png"  alt="Perfil" class="rounded-circle img-perfil"
               style="width: 40px; height: 40px; object-fit: cover;">
             </div>
           </div>
         </div>
       </nav>
-    
     `;
 
-     // Comportamiento del toggle personalizado
-     const toggleBtn = this.shadowRoot.getElementById("btn-toggle");
-     const menu = this.shadowRoot.getElementById("menu");
- 
-     toggleBtn.addEventListener("click", () => {
-       menu.classList.toggle("show");
-     });
- 
-     console.log("Componente <mi-navegacion> cargado correctamente");
-   }
+    // 1. Comportamiento del toggle personalizado (existente)
+    const toggleBtn = this.shadowRoot.getElementById("btn-toggle");
+    const menu = this.shadowRoot.getElementById("menu");
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+
+    // 2. Lógica de enrutamiento SPA (NUEVA) 🚀
+   const navLinks = this.shadowRoot.querySelectorAll('a.nav-link, a.titulo-rodolfo'); // Incluye el título [cite: 984]
+    
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // 🛑 Detiene la recarga de página 
+        
+        const targetPath = link.getAttribute('href'); 
+        
+        // Llama a la función global
+        if (typeof window.navigateTo === 'function') {
+            window.navigateTo(targetPath); 
+            // Cierra el menú móvil si estaba abierto 
+            // (Asegúrate de tener la variable 'menu' definida en este scope)
+            // if (menu.classList.contains("show")) { menu.classList.remove("show"); }
+        } else {
+            console.error("Función window.navigateTo no definida. FALLO DE SCOPE.");
+        }
+    });
+});
+
+    console.log("Componente <mi-navegacion> cargado correctamente");
+  }
 }
 
 customElements.define("mi-navegacion", Navegacion);
-

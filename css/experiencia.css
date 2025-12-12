@@ -4,9 +4,20 @@ html, body {
     font-family: Arial, sans-serif;
   
 }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;   /* Oculta la barra de scroll vertical */
+    height: 0;  /* Oculta la barra de scroll horizontal */
+    display: none; /* Propiedad de respaldo */
+}
+
+/* 2. Ocultar en Firefox */
+body {
+    scrollbar-width: none;  /* Oculta la barra de scroll */
+    -ms-overflow-style: none; /* Oculta en IE y Edge antiguo */
+}
+
 .light-mode body {
   background-color: #95AEE9 !important;;
-}
-.experiencia {
-  margin-top: 100px; /* Ajusta el valor según sea necesario */
 }
